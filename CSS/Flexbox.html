@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flexbox</title>
+  <style>
+    /* ---- POST UI ------------ */
+    body {
+      background-color: #eee;
+    }
+
+    .post {
+      width: 200px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 5px;
+      margin: 10px 0;
+      height: max-content;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .post .caption {
+      margin: 0;
+      padding: 5px 10px 0;
+    }
+
+    .post .actions {
+      padding: 10px;
+    }
+    .post .actions img {
+      width: 20px;
+      margin-right: 5px;
+    }
+
+    /* --------- FLEXBOX ------------ */
+    #container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+
+    /* #container {
+      display: flex;
+      height: 900px;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    } */
+
+    /* --------- */
+    /* #outer {
+      width: 500px;
+      height: 500px;
+      background-color: darkcyan;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #inner {
+      width: 300px;
+      height: 300px;
+      background-color: chocolate;
+    } */
+  </style>
+</head>
+<body>
+  <h1>Flexbox</h1>
+  <div id="container">
+    <div class="post">
+      <img src="https://plus.unsplash.com/premium_photo-1661964304872-7b715cf38cd1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <p class="caption">
+        <b>@gonzo</b> Enjoyed time! 🏖️
+      </p>
+      <div class="actions">
+        <img src="assets/heart.png">
+        <img src="assets/comment.png">
+        <img src="assets/share.png">
+      </div>
+    </div>
+    <div class="post">
+      <img src="https://plus.unsplash.com/premium_photo-1754505338674-51326ca5ac81?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <p class="caption">
+        <b>@kibbe</b> It was great time besides the sea. Would love to go there again!!
+      </p>
+      <div class="actions">
+        <img src="assets/heart.png">
+        <img src="assets/comment.png">
+        <img src="assets/share.png">
+      </div>
+    </div>
+    <div class="post">
+      <img src="https://plus.unsplash.com/premium_photo-1697729635844-0c97618e29f0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <p class="caption">
+        <b>@gylnnis</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit culpa nobis unde, excepturi voluptatibus!
+      </p>
+      <div class="actions">
+        <img src="assets/heart.png">
+        <img src="assets/comment.png">
+        <img src="assets/share.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="outer">
+    <div id="inner"></div>
+  </div> -->
+</body>
+</html>
+
+<!--
+  # Flexbox ***
+    - Organize items in one direction (vertically/horizontally)
+    - Properties:
+      - Container
+        - display ***: flex (Container follows flexbox layout)
+        - flex-direction ***: Set the direction of flex container's item 
+          - row (default)
+          - column
+        - justify-content ***: Align items across "main axis"
+          - start: Start of the container (default)
+          - end: End of the container
+          - center: Center of the container
+          - space-around: Equal space on both the sides (space in between will be 2* space)
+          - space-evenly: Equal space on both the sides (space in between will be merged)
+          - space-between: Space in between items
+        - align-items ***: Align items across "cross axis"
+          - start: Start of the container (default)
+          - end: End of the container
+          - center: Center of the container
+        - flex-wrap: Wrap the child items if they exceed the flex container's dimensions
+          - nowrap (default): No wrapping
+          - wrap: Wrap child items to the next row
+
+      - Individual Items
+        - order: Set the order of indvidual item
+          - Min, default: 0
+          - Lesser order will be placed first, i.e, 0 before 1 and so on ...
+
+      # Main axis & Cross axis:
+        - flex-direction: row (default)
+          - Main axis: Horizontal axis
+          - Cross axis: Vertical axis
+        - flex-direction: column (default)
+          - Main axis: Vertical axis
+          - Cross axis: Horizontal axis
+
+      # Rule to remember:
+        - Default (flex-direction: row):
+          - Main axis: Horizontal axis
+          - Cross axis: Veritical axis
+        - Align items
+          - Main axis: justify-content
+          - Cross axis: align-items
+-->

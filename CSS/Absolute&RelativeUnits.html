@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute and Relative units</title>
+  <style>
+    #outer {
+      width: 400px;
+      border: 1px solid black;
+    }
+
+    #inner {
+      width: 50%;
+      height: 200px;
+      background-color: goldenrod;
+    }
+
+    #outer-2 {
+      width: 400px;
+      border: 1px solid black;
+    }
+
+    #inner-2 {
+      width: 50vw;
+      height: 200px;
+      background-color: goldenrod;
+    }
+
+    #bg-test {
+      background-color: darkcyan;
+      height: 100vh;
+    }
+
+    #section-1 {
+      background-color: azure;
+      padding: 10px;
+      margin: 10px;
+      font-size: 10px;
+    }
+
+    /* #section-1 h1 {
+      font-size: 4em;
+      margin: 0.5em 0;
+    }
+
+    #section-1 p {
+      font-size: 2.5em;
+    } */
+
+    html {
+      font-size: 5px; /* 1rem = 5px */
+    }
+
+    #section-1 h1 {
+      font-size: 10rem;
+    }
+
+    #section-1 p {
+      font-size: 6rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="outer">
+    <div id="inner"></div>
+  </div>
+
+  <div id="outer-2">
+    <div id="inner-2"></div>
+  </div> -->
+
+  <!-- <div id="bg-test"></div> -->
+
+  <div id="section-1">
+    <h1>Lorem ipsum dolor</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non deserunt rerum voluptatem voluptatibus dignissimos, officiis quaerat quae, quidem minus expedita neque vitae et quod, ut at veritatis! Quisquam, laudantium.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At est sequi voluptate, cum, quaerat nam ea perspiciatis eaque, quod doloribus laboriosam veniam. Debitis amet ipsa velit modi. Eos dolores nostrum, eaque obcaecati possimus numquam, laudantium vitae minus minima ex adipisci quod. Asperiores dolorem fugiat corrupti illo. Corrupti rem sed asperiores.</p>
+  </div>
+</body>
+</html>
+
+<!--
+  # Absolute & Relative units
+    - Absolute units:
+      - Fixed value (Value does not change based on parent element/ viewport dimensions)
+      - Examples:
+        - px (Pixels)
+        - pt (Points)
+    - Relative units:
+      - Dynamic/variable value (Value changes based on parent element/ viewport dimensions)
+      - Examples:
+        - %: Percentage of parent element/viewport dimension
+        - vw: Percentage of viewport width
+          - 1vw = 1% of 'viewport width'
+        - vh: Percentage of viewport height
+          - 1vh = 1% of 'viewport height'
+        - em: Font size of current/parent element
+          - 1em = 1 * font size of current/parent element
+        - rem: Font size of root element (html)
+          - 1rem = 1 * font size of root element
+
+-->

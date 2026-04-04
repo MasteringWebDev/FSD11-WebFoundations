@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Basics</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Blogs</h1>
+  <hr>
+
+  <div>
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <img src="https://www.4cpl.tech/ast/uploads/2023/06/Web-Development.jpg">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt ut doloribus qui debitis placeat rerum architecto consequuntur vel earum minus error ipsam iusto nulla, repellendus eum laudantium ea culpa quasi corrupti dolor doloremque cum? Sequi exercitationem, rerum porro quibusdam dolorem nesciunt deserunt. Facere cumque eveniet eligendi ut alias impedit!</p>
+  </div>
+
+  <div>
+    <h2>Ipsum dolor sit amet consectetur</h2>
+    <img src="https://www.creative-tim.com/blog/content/images/2022/01/which-development-job-is-right-for-you.jpg">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates suscipit facere soluta sit commodi asperiores neque cupiditate delectus dolore quia, earum cum et aperiam perspiciatis. Voluptate eos dolor iusto? Tempore eligendi expedita quam soluta, cum in vitae ipsa molestiae, eaque nam molestias aperiam quia doloribus culpa, provident ipsum. Ratione officia numquam non dolores delectus officiis beatae corporis minima labore vel.</p>
+  </div>
+
+  <div>
+    <h2>Dolor sit amet consectetur adipisicing</h2>
+    <img src="https://codeflies.com/wp-content/uploads/2019/09/blog-4.jpg">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellendus suscipit commodi sapiente dolorum delectus explicabo saepe praesentium, id enim consequuntur magnam, at pariatur mollitia totam odio asperiores architecto eum itaque quisquam ipsam sequi. Dicta possimus minus aut vitae culpa tempore similique debitis, animi voluptate laboriosam! Quos porro distinctio excepturi? Natus qui minima est laboriosam. Dolore a sunt quibusdam accusamus aspernatur, voluptatem alias praesentium, nam consectetur assumenda laudantium odit harum?</p>
+  </div>
+</body>
+</html>
+
+<!--
+  # CSS:
+    - Cascading Style Sheets
+    - Add styles to webpages
+    - 3 types of styling:
+      - Inline styling (Highest priority)
+        - 'style' attribute
+        - Syntax:
+          - <tag style="property1: value1;"></tag>
+          - More than 1 style property
+            - "property1: value1; property2: value2; .."
+      - Internal styling
+        - 'style' tag (inside head tag)
+        - Syntax:
+          <style>
+            selector {
+              property1: value1;
+              property2: value2;
+            }
+          </style>
+      - External styling
+        - Create a separate file with .css extension
+        - Link this external css file to HTML document
+        - Syntax:
+          <link rel="stylesheet" href="css-file.css">
+          - rel: Relation
+          - href: Relative path of css file
+
+    - Properties:
+      - color: Add color to HTML element
+      - background-color: Add background color to HTML element
+      - font-size: Size of the text element (px)
+      - font-family: Font type of the text element 
+      - font-style: Font style of the text element (Eg.: italic)
+      - font-weight: Text bold/lighter (100-900)
+      - width: Width of HTML element (px)
+      - height: Height of HTML element (px)
+      - border: Border of HTML element
+       - Syntax: border: [width] [style] [color]
+       - Sub properties
+        - border-width: Width of the border
+        - border-style: Border style (solid, dashed, dotted)
+        - border-color: Color of the border
+      - border-radius: Rounded border corners
+      - padding: Space around the content and before the border
+        - padding: [padding-top] [padding-right] [padding-bottom] [padding-left]
+      - margin: Space around the content after the border
+        - margin: [margin-top] [margin-right] [margin-bottom] [margin-left]
+      - padding, margin:
+        - 1 value: All sides
+        - 2 values: [top, bottom] [right, left]
+        - 4 values: [top] [right] [bottom] [left]
+      - text-align: Align elements (left, right, center, justify)
+
+    - Specificty (Priority) rules ***:
+      - Inline > Internal, External
+      - Latest style property value is applied (Selectors are same)
+    
+    - Selectors ***
+      - Element Selector (h1, p, div, img, etc.)
+      - Class Selector (.): Multiple elements
+      - ID Selector (#): Unique element
+      - Universal Selector (*)
+
+    - Color codes:
+      - RGB (Red, Green, Blue)
+        - Syntax: rgb(R, G, B)
+          - R, G, B values can range from 0-255
+        - Examples:
+          - rgb(0, 0, 0): Black
+          - rgb(255, 255, 255): White
+          - rgb(255, 0, 0): Red
+          - rgb(0, 255, 0): Green
+          - rgb(0, 0, 255): Blue
+        - RGBA (A - Alpha/Opacity/Transparency)
+          - A: 0-1 (0 -> invisible, 1 -> 100% visible)
+      - HEX (0-F)
+        - Syntax: #RRGGBB
+          - RR, GG, BB values can range from 00 - FF
+        - Examples:
+          - #000000: Black
+          - #FFFFFF: White
+          - #FF0000: Red
+          - #00FF00: Green
+          - #0000FF: Blue
+        - #RRGGBBAA (AA - Alpha/Opacity/Transparency)
+          - AA: 00-FF (00 -> invisible, FF -> 100% visible)
+
+    - Comment in CSS:
+      /* */
+-->

@@ -1,0 +1,58 @@
+# Git: Version Control System (VCS)
+  - Tool used to track changes in code over time
+  - Why needed?
+    - Track changes in the codebase
+    - Collaborate with teams
+    - Go back to previous version
+
+# GitHub: Cloud platform for Git repositories
+  - Used to store and share Git repositories online
+  - Alternatives:
+    - GitLab
+    - Bitbucket
+
+# Important Terms:
+  - Repository (Repo): Project folder tracked by Git
+    - Local Repository: On your computer
+    - Remote Repository: On GitHub (Can be shared online)
+  - Working directory: Where you write and modify code
+  - Staging area: Where selected changes are prepared before commit
+  - Commit: Snapshot of changes saved in Git (along with a commit message)
+  - Branch: A separate version of your project (Default branch: master/main)
+  - push: Send commits from local -> GitHub (Can be related to "Upload")
+  - pull: Get latest commits from GitHub -> local (Can be related to "Download")
+  - Clone: Copy a remote repository to local machine
+
+# Git Worflow:
+  - PUSH CODE TO GITHUB
+    - First time
+      1. Initialize a git repsoitory
+        - git init: Creates a local repsoitory (Will create a hidden .git folder to store git info)
+      2. Working directory (Write and modify code)
+        - git status: Check status of git repsoitory
+          - Untracked files: Files in working directory, not staged
+          - Changes not staged for commit: Changes in working directory, not staged
+          - Changes to be committed: Files which are in staging area
+          - "nothing to commit, working tree clean": No new changes
+      3. Staging Area (Selected changes are prepared before commit)
+        - git add .: Add all file changes to Staging area 
+          - git add specific.html : Adds specific.html file changes to Staging area
+      4. Commit (Snapshot of changes):
+        - git commit -m "Commit Message"
+          - Returns commit hash for that specific commit
+        - git log: Commit history
+          - git log --oneline: Commit history in one line
+      5. Remote (GitHub via push)
+        - Create a new repository on GitHub
+        - git remote add origin <repository-url>: Connect to GitHub remote repository
+        - git push -u origin master: Push code to GitHub repository
+    - Second time and onwards
+      - git add .: Add all file changes to Staging area 
+        - git add specific.html : Adds specific.html file changes to Staging area
+      - git commit -m "Commit Message"
+      - git push: Push code to GitHub repository
+  - PULL CODE TO GITHUB
+    - First time
+      - git clone <repository-url>: Clone repository 
+    - Second time and onwards
+      - git pull: Pull code from GitHub repository

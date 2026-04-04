@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forms</title>
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+  <form>
+    <div>
+      <input 
+        type="text" 
+        name="fullname"
+        placeholder="Enter your full name"
+        required
+      >
+    </div>
+    <div>
+      <input 
+        type="number" 
+        name="age"
+        placeholder="Enter your age"
+        required
+      >
+    </div>
+    <div>
+      <input 
+        type="email" 
+        name="email"
+        placeholder="Enter your email address"
+        required
+      >
+    </div>
+    <div>
+      <input 
+        type="password" 
+        name="password"
+        placeholder="Enter your password"
+        required
+      >
+    </div>
+    <div>
+      Upload your profile image
+      <input type="file" name="profileimage">
+    </div>
+    <div>
+      Gender:
+      <input type="radio" name="gender" value="M">Male
+      <input type="radio" name="gender" value="F">Female
+      <input type="radio" name="gender" value="O">Others
+    </div>
+    <div>
+      Hobbies:
+      <input type="checkbox" name="hobbies" value="SWIM">Swimming
+      <input type="checkbox" name="hobbies" value="DANCE">Dancing
+      <input type="checkbox" name="hobbies" value="PROGRAM">Programming
+    </div>
+    <div>
+      City:
+      <select name="city">
+        <option value="NY">New York</option>
+        <option value="LO">London</option>
+        <option value="DL">Delhi</option>
+      </select>
+    </div>
+    <div>
+      Bio:
+      <textarea placeholder="Enter your bio" rows="5" cols="40"></textarea>
+    </div>
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+    <button type="button">Already have an account? Login</button>
+  </form>
+</body>
+</html>
+
+<!--
+  # Forms:
+    - Used to collect data from the user
+    - Tags:
+      - <form></form>: Wrapper tag for HTML Forms
+      - <input>: Field to collect user input
+        - 'type' attribute (Mandatory)
+          - text: Simple text input
+          - number: Number input
+          - email: Email input (Broswer validation)
+          - password: Password input (Masked)
+          - file: File input
+          - radio: Single selection
+          - checkbox: Multiple selection
+          -----------
+          - date: Date input
+          - time: Time input
+          - datetime-local: Date + Time input
+          - color: Color input
+          - range: Range selection
+          -----------
+        - 'placeholder' attribute: Provide a hint
+        - 'required' attribute: Make a field required (Broswer validation)
+        - 'disabled' attribute: Disable a field
+        - 'name' attribute: Unique identifier for fields
+        - 'value' attribute: Default value for that field
+
+      - <button></button>: Buttons
+        - 'type' attribute
+          - submit: Used to submit the form
+          - reset: Used to reset the form
+          - button: Used to add custom button in the form
+        - 'disabled' attribute: Disable a button
+      
+      - <select></select>: Dropdowns
+        - <option></option>: Dropdown options
+
+      - <textarea></textarea>: Ideal for paragraph length text input
+        - 'rows' attribute: Set the height
+        - 'cols' attribute: Set the width
+-->

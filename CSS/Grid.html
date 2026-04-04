@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grid</title>
+  <style>
+    #container {
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px;
+      grid-column-gap: 60px;
+      grid-row-gap: 30px;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(95, 158, 160, 0.5);
+      border: 1px solid cadetblue;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+  </div>
+</body>
+</html>
+
+<!--
+  # Grid
+    - Organize items in both the direction (rows & columns)
+    - Properties:
+      - display: grid (Container becomes follows grid layout)
+      - grid-template-columns: Define number of columns with dimension for each column
+        - Examples:
+          - 100px 100px: 2 columns of 100px each
+          - 100px 200px 300px: 3 columns (100px, 200px, 300px respectively)
+          - 1fr 1fr: Divide the entire space in 2 fractions and each column will be 1 fr each
+          - 1fr 2fr: Divide the entire space in 3 fraction; allot 1fr to first column, and 2fr to second column
+          - repeat(number, dimension): Ideal when same dimensions for multiple columns
+      - grid-template-rows: Define dimension for each row
+      - grid-gap/ gap: Gap between the cells (rows and columns)
+        - 10px (10px row gap, 10px column gap)
+        - 10px 20px (10px row gap, 20px column gap)
+      - grid-row-gap/ row-gap: Gap between the rows
+      - grid-column-gap/ column-gap: Gap between the columns
+-->

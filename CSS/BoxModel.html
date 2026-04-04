@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Box Model</title>
+  <style>
+    #outer-box {
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+
+    .inner-box {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #box-1 {
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      border: 10px solid black;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Box Model</h1>
+  <!-- <div id="outer-box">
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+  </div> -->
+
+  <div id="box-1">
+  </div>
+</body>
+</html>
+
+<!--
+  # Box Model ***
+    - HTML element as a rectangular box
+    - 4 different components:
+      - Content (Blue): Actual dimensions of the element
+      - Padding (Green): Space around the content before the border
+      - Border (Yellow): Border width
+      - Margin (Brown): Space around the element after the border
+
+    - 'box-sizing': Control the dimensions of HTML element
+      - content-box (default):
+        - width, height: only applied to the content
+      - border-box:
+        - width, height: Applied to (content+padding+border)
+-->
