@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialConnect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- -------------- NAVBAR SECTION -------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body"  data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SocialConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Connections</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Other actions
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Create post</a></li>
+              <li><a class="dropdown-item" href="#">Search friends</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Messages</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="https://images.unsplash.com/photo-1591569033002-d49b7f05338f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+              Hi, Andrea
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- -------------- MAIN SECTION -------------- -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- LEFT SUB SECTION -->
+      <div class="col-lg-4 col-xs-12" id="left-section">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title display-3 fw-normal">
+              2,145
+            </h5>
+            <p class="card-text">Followers</p>
+
+            <div class="mb-2 connections-avatar-list">
+              <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+              <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+              <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+              <span class="bg-dark-subtle">+</span>
+            </div>
+            <a href="#" class="btn btn-primary" id="view-all-btn">
+              View all
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SUB SECTION -->
+      <div class="col-lg-8 col-xs-12 mt-4 mt-lg-0" id="right-section">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Received invitations
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1759701546655-d90ec831aa52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Joshua H</h5>
+                          <p class="card-text text-body-secondary">
+                            Engineering Manager at Google
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Accept</button>
+                          <button type="button" class="btn btn-secondary">Reject</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1719603785926-84d214438120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHVzZXIlMjBoZWFkc2hvdHMlMjBzcXVhcmV8ZW58MHx8MHx8fDA%3D" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Sonny B</h5>
+                          <p class="card-text text-body-secondary">
+                            Software Intern at Amazon
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Accept</button>
+                          <button type="button" class="btn btn-secondary">Reject</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1678282955808-de92256dbd59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVzZXIlMjBoZWFkc2hvdHMlMjBzcXVhcmV8ZW58MHx8MHx8fDA%3D" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Jesse W</h5>
+                          <p class="card-text text-body-secondary">
+                            Senior Software Engineer at Netflix
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Accept</button>
+                          <button type="button" class="btn btn-secondary">Reject</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item mt-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                People you may know
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVzZXIlMjBoZWFkc2hvdHMlMjBzcXVhcmV8ZW58MHx8MHx8fDA%3D" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Joshua H</h5>
+                          <p class="card-text text-body-secondary">
+                            Engineering Manager at Google
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Follow</button>
+                          <button type="button" class="btn btn-secondary">Ignore</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1654110455429-cf322b40a906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Joshua H</h5>
+                          <p class="card-text text-body-secondary">
+                            Software Intern at Amazon
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Follow</button>
+                          <button type="button" class="btn btn-secondary">Ignore</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 user-card">
+                  <div class="row g-0">
+                    <div class="col-4 user-card-avatar-container">
+                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww" class="img-fluid rounded-start user-card-avatar" alt="...">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <h5 class="card-title">Joshua H</h5>
+                          <p class="card-text text-body-secondary">
+                            Senior Software Engineer at Netflix
+                          </p>
+                          <div class="mb-2 connections-avatar-list">
+                            <img src="https://images.unsplash.com/photo-1759701546662-b79f5d881124?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1748028313767-67d97c23a0d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1542909168-6296a31d7689?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMGhlYWRzaG90cyUyMHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D" class="user-avatar">
+                            <span class="bg-dark-subtle">+9</span>
+
+                            mutual connections
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <button type="button" class="btn btn-primary">Follow</button>
+                          <button type="button" class="btn btn-secondary">Ignore</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>
