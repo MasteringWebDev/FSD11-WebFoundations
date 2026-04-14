@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions</title>
+</head>
+<body>
+  <h1>Conditions</h1>
+
+  <script>
+    /*
+      # Conditions:
+        - Create logic based on boolean value (true/false)
+        - if else condition ***
+          - Syntax:
+          if(condition) {
+            // Code to execute if condition is true
+          } else {
+            // Code to execute if condition is false
+          }
+        - else if ***: Used to add alternative "if conditions" to the above one
+          - Syntax:
+          if(condition1) {
+            // Code to execute if condition1 is true
+          } else if (condition2) {
+            // Code to execute if condition2 is true
+          } else {
+            // Code to execute if condition1 & condition2 are false
+          }
+        - switch case condition **: Check one variable against multiple values
+          - Syntax:
+          switch(variable) {
+            case 'value1':
+              // Code to be execute when variable == value1
+              break
+            case 'value2':
+              // Code to be execute when variable == value2
+              break
+            ...
+            default:
+              // Default code to be execute when variable != any of the above cases
+          }
+
+    */
+
+    // var num1 = 10
+    // var num2 = 20
+
+    // if(num1 < num2) {
+    //   console.log('YES')
+    // } else {
+    //   console.log('NO')
+    // }
+
+    // if(num1 > num2) {
+    //   console.log('YES')
+    // } else {
+    //   console.log('NO')
+    // }
+
+    // var fruit1 = 'Watermelon'
+    // var fruit2 = 'Banana'
+    // var fruit3 = 'Apple'
+
+    // if(fruit1 == fruit2) {
+    //   console.log(1)
+    // } else if(fruit1 == fruit3) {
+    //   console.log(2)
+    // } else if (fruit2 == fruit3) {3283795
+    //   console.log(3)
+    // } else {
+    //   console.log(4)
+    // }
+
+    /* --------------------------------- */
+    /* # QUESTION 1: Take an I/P number from the user, and log 'YES' if it is greater than 100 or log 'NO' if it is lesser than 100
+    Examples:
+      1. I/P: 120 O/P: 'YES'
+      2. I/P: 50 O/P: 'NO'
+      3. I/P: 100 O/P: 'NO'
+    */
+
+    // var num = Number(prompt('Enter any number'))
+    // if(num > 100) {
+    //   console.log('YES')
+    // } else {
+    //   console.log('NO')
+    // }
+
+    /* --------------------------------- */
+    /* # QUESTION 2: Take 2 I/P numbers from the user, and check if they are equal or not
+    Examples:
+      1. I/P: 100, 200 O/P: 'NOT EQUAL'
+      2. I/P: 100, 100 O/P: 'EQUAL'
+      3. I/P: 5, 5 O/P: 'EQUAL'
+    */
+
+    // var num1 = Number(prompt('Enter the first number'))
+    // var num2 = Number(prompt('Enter the second number'))
+
+    // if(num1 === num2) {
+    //   console.log('EQUAL')
+    // } else {
+    //   console.log('NOT EQUAL')
+    // }
+
+    /* --------------------------------- */
+    /* # QUESTION 3: Take 2 I/P numbers from the user, and find the greater number among the 2 numbers
+    Examples:
+      1. I/P: 100, 200 O/P: 200
+      2. I/P: 100, 100 O/P: 'BOTH ARE SAME'
+      3. I/P: 5, 7 O/P: 7
+    */
+    // var num1 = Number(prompt('Enter the first number'))
+    // var num2 = Number(prompt('Enter the second number'))
+
+    // if(num1 > num2) {
+    //   console.log(num1)
+    // } else if (num2 > num1) {
+    //   console.log(num2)
+    // } else {
+    //   console.log('BOTH ARE SAME')
+    // }
+
+    /* --------------------------------- */
+    /* # QUESTION 4: Take 3 I/P numbers from the user, and find the greater number among the 3 numbers (All inputer numbers will be unique)
+    Examples:
+      1. I/P: 100, 200, 300 O/P: 300
+      2. I/P: 700, 400, 600 O/P: 700
+      3. I/P: 5, 7, 3       O/P: 7
+    */
+
+    // var num1 = Number(prompt('Enter the first number'))
+    // var num2 = Number(prompt('Enter the second number'))
+    // var num3 = Number(prompt('Enter the third number'))
+
+    // if(num1 > num2 && num1 > num3) {
+    //   console.log(num1)
+    // } else if(num2 > num1 && num2 > num3) {
+    //   console.log(num2)
+    // } else {
+    //   console.log(num3)
+    // }
+    
+    /* --------------------------------- */
+    /* # QUESTION 5: Take a fruit from the user and return the color of the fruit
+    Examples:
+      1. I/P: Banana O/P: Yellow
+      2. I/P: Apple O/P: Red
+      3. I/P: Watermelon O/P: Green
+      4. Any other: O/P: 'NA'
+    */
+
+    // Solution 1: Using if else condition
+    // var fruit = prompt('Enter fruit name')
+    // if(fruit == 'Banana') {
+    //   console.log('YELLOW')
+    // } else if(fruit == 'Apple') {
+    //   console.log('RED')
+    // } else if(fruit == 'Watermelon') {
+    //   console.log('GREEN')
+    // } else {
+    //   console.log('NA')
+    // }
+
+    // Solution 2: Using switch case
+    // var fruit = prompt('Enter fruit name')
+    // switch(fruit) {
+    //   case 'Banana':
+    //     console.log('YELLOW')
+    //     break
+    //   case 'Apple':
+    //     console.log('RED')
+    //     break
+    //   case 'Watermelon':
+    //     console.log('GREEN')
+    //     break
+    //   default:
+    //     console.log('NA')
+    // }
+  </script>
+</body>
+</html>
