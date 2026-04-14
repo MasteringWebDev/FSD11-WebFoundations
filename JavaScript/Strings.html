@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings</title>
+</head>
+<body>
+  <h1>Strings</h1>
+
+  <script>
+    /* 
+      # Strings:
+        - Can be declared within '', "", ``
+        - Special characters:
+          - Escape character (\)
+          - Next line character (\n)
+          - Tab space character (\t)
+
+        - Position vs Index
+          - Index = Position - 1
+          - Example:
+            P   I
+            1   0
+            2   1
+            3   2
+            ... ...
+            n   n-1
+
+        - Access a specific character in a string using index
+          - Syntax: str[index]
+        
+        - '+' operator works as a concatenation operator with strings
+          - Eg.: 'Jesse' + 'W' = 'JesseW'
+        
+        - Properties:
+          - length ***: Total number of characters
+        - Methods:
+          - toUpperCase(): Returns the string in upper case
+          - toLowerCase(): Returns the string in upper case
+          - indexOf() ***: Return the index of the first occurence of the substring/character in the string, else returns - 1
+            - lastIndexOf(): Return the index of the last occurence of the substring/character in the string, else returns - 1
+          - includes() ***: Return true if the substring/character exists in the string, else returns false
+          - concat(): Concatenate two or more strings
+            - Alternative: '+' operator
+          - charAt(index): Returns the character at the specified index
+            - Alternative: str[index]
+          - slice(startIndex, endIndex) ***: Returns a substring (Ensure startIndex < endIndex)
+            - startIndex, endIndex: startIndex to endIndex - 1
+            - startIndex: startIndex to the end of the string
+            - No arguments: Complete string
+            - Alternatives:
+              - substr(startIndex, substringLength): Returns a substring starting frm startIndex upto 'substringLength' characters
+              - substring(startIndex, endIndex): Almost similar to slice
+                - negative index will be treated as 0
+                - startIndex > endIndex: index will be swapped
+          - replace(substring, replaceValue): Returns a string where first occurence of the substring is replaced with the replaceValue
+            - replaceAll(substring, replaceValue): Returns a string where all occurences of the substring is replaced with the replaceValue
+        
+
+        - Additional notes:
+          - To get last character in a string
+            - str[str.length - 1]
+        
+    */
+
+    // var student = 'Sonny'
+    // var student = "Sonny"
+    // var student = `Sonny`
+
+    // var student = 'Sonny'
+    // var text = "Sonny says that the batch was 'awesome'"
+    // console.log(text)
+    // var text = 'Sonny said - "I want to build a project with Joshua"'
+    // console.log(text)
+    // var text = `'""'`
+    // console.log(text)
+    
+    // var text = 'Sonny says that the batch was \'awesome\''
+    // console.log(text)
+
+    // var text = 'My hobbies are: \n1. Swimming \n2. Singing \n3. Dancing'
+    // console.log(text)
+
+    // var text = 'My hobbies are: \n\t1. Swimming \n\t2. Singing \n\t3. Dancing'
+    // console.log(text)
+
+    // var student = 'Kibbe'
+    // console.log(student[0])
+    // console.log(student[4])
+
+    // var firstName = 'Joshua'
+    // var lastName = 'H'
+    // console.log(firstName + ' ' + lastName)
+
+    // var name = 'Jane C'
+    // console.log(name.length)
+
+    // var student = 'Andrea'
+    // console.log(student[student.length-1])
+
+    // var str = ''
+    // console.log(str.length)
+
+    // var student = 'Gonzo'
+    // console.log(student.toUpperCase())
+    // var student = 'Eric'
+    // console.log(student.toLowerCase())
+
+    // var student = 'Sonny'
+    // console.log(student.indexOf('S'))
+    // console.log(student.indexOf('on'))
+    // console.log(student.indexOf('z'))
+    // console.log(student.indexOf('n'))
+    // console.log(student.lastIndexOf('n'))
+
+    // console.log(student.includes('Son'))
+    // console.log(student.includes('z'))
+
+    // var text = 'Frontend Development'
+    // console.log(text.slice(0, 8))
+    // console.log(text.slice(0, 5))
+    // console.log(text.slice(9))
+    // console.log(text.slice())
+    // console.log(text.substr(0, 12))
+    // console.log(text.substring(0, 8))
+
+    // console.log(text.slice(8, 0))
+    // console.log(text.substring(8, 0)) // (0, 8)
+
+    // console.log(text.slice(-3))
+    // console.log(text.substring(-3)) // (0)
+
+    // var str1 = 'MERN STACK DEVELOPMENT'
+    // console.log(str1.replace('E', 'F'))
+    // console.log(str1.replaceAll('E', 'F'))
+  </script>
+</body>
+</html>
