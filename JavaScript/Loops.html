@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+</head>
+<body>
+  <script>
+    /*
+      # Loops: Execute logic in a repeated basis
+        - Terms:
+          - Iteration: Individual cycles
+          - Condition: Determine whether to proceed or halt
+        - Process:
+          - In each iteration, condition will be checked
+          - If condition is true, iteration will be processed
+          - Else if condition is false, the loop terminates
+        - 3 parts of loop declaration:
+          - Initialization loop variable
+          - Condition
+          - Increment/Decrement for loop variable
+
+        - Types of loops
+          1. while loop
+            - Syntax:
+              // initialization
+              while(condition) {
+                // logic to be executed repeatedly
+                // increment/decrement loop variable
+              }
+          2. do while loop
+            - Syntax:
+              // initialization
+              do {
+                // logic to be executed repeatedly
+                // increment/decrement loop variable
+              } while(condition)
+          3. for loop ***
+            - Syntax:
+              for( //initialization; condition; increment/decrement) {
+                // logic to be executed repeatedly
+              }
+
+    */
+
+    // var i = 1 // Initialization loop variable
+    // while(i <= 3) { // Condition
+    //   console.log('Hi')
+    //   i++ // Increment/Decrement for loop variable
+    // }
+
+    // var i = 1 // i = 4
+    // while(i <= 3) { // false
+    //   console.log('Hi')
+    //   i++
+    // }
+
+    /* -------------------------- */
+    /* Examples 1: Print first 10 numbers */
+    // var x = 1
+    // while(x <= 10) {
+    //   console.log(x)
+    //   x++
+    // }
+
+    /* -------------------------- */
+    /* Examples 2: Print first 10 numbers in reverse order */
+    // var x = 10
+    // while(x >= 1) {
+    //   console.log(x)
+    //   x--
+    // }
+
+    /* -------------------------- */
+    /* CAUTION: Infinite loop (A loop where the condition never becomes false, hence it keeps running indefinitely)
+
+    // var x = 10
+    // while(x >= 1) {
+    //   console.log(x)
+    //   x++
+    // }
+
+    while(true) {
+      console.log('Hi')
+    }
+
+    /* -------------------------- */
+    /* Examples 3: Print all even numbers from 1 to 10 */
+    // var x = 1
+    // while(x <= 10) {
+    //   if(x % 2 == 0) {
+    //     console.log(x)
+    //   }
+    //   x++
+    // }
+
+    /* -------------------------- */
+    /* Examples 4: Print all odd numbers from 1 to 10 */
+    // var x = 1
+    // while(x <= 10) {
+    //   if(x % 2 != 0) {
+    //     console.log(x)
+    //   }
+    //   x++
+    // }
+
+    /* -------------------------- */
+    /* Examples 5: Print all characters of a string */
+    // var student = 'Gonzo Bombas'
+
+    // for(var i = 0; i < student.length; i++) {
+    //   console.log(student[i])
+    // }
+
+    /* -------------------------- */
+    /* Examples 6: Print all characters of a string and mention if it is a VOWEL or CONSONANT or NONE */
+    // var student = prompt('Enter student name')
+    // student = student.toLowerCase()
+
+    // for(var i = 0; i < student.length; i++) {
+    //   if(student[i] == 'a' || student[i] == 'e' || student[i] == 'i' || student[i] == 'o' || student[i] == 'u') {
+    //     console.log(student[i], 'VOWEL')
+    //   } else if(student[i] == ' ') {
+    //     console.log(student[i], 'NONE')
+    //   } else {
+    //     console.log(student[i], 'CONSONANT')
+    //   }
+    // }
+
+    /* -------------------------- */
+    /* Examples 7: Print the squares of the first 5 numbers */
+    // var i = 1
+    // while(i <= 5) {
+    //   console.log(i ** 2)
+    //   i++
+    // }
+
+    // for(var i = 1; i <= 5; i++) {
+    //   console.log(i**2)
+    // }
+4
+    /* -------------------------- */
+    /* Examples 8: Calculate the factorial of the input number provided */
+    // var num1 = Number(prompt('Enter the number to get factorial'))
+    // var factorial = 1
+
+    // if(num1 == 0 || num1 == 1) {
+    //   console.log(1)
+    // } else {
+    //   for(var i = num1; i >= 1; i--) {
+    //     factorial = factorial * i
+    //   }
+
+    //   console.log(factorial)
+    // }
+  </script>
+</body>
+</html>
