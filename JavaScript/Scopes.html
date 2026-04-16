@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scopes</title>
+</head>
+<body>
+  <script>
+    /*
+      # Declare variables
+        - var, let, const
+        - ES6: ECMAScript 6 (2015)
+          - let, const (Block scope)
+
+        - var: Variables
+          - Can be re-declared
+          - Can be re-assigned
+          - Global scope
+        - let: Variables
+          - Cannot be re-declared
+          - Can be re-assigned
+          - Block scope
+        - const: Constants
+          - Cannot be re-declared
+          - Cannot be re-assigned
+          - Block scope
+
+        
+      # Scope: Space where a variable can be accessed
+        - Global scope: Variable can be accessed anywhere in the file
+        - Function scope: Variable can be accessed within the function
+        - Block scope ({}): Variable can be accessed within the block
+    */
+
+    // var x = 10
+    // var x = 20 // Does not throw an error
+    // console.log(x)
+
+    // let x = 10
+    // let x = 20
+    // console.log(x)
+
+    // const x = 10
+    // const x = 20
+    // console.log(x)
+
+    // let x = 10
+    // x = 20
+    // console.log(x)
+
+    // const x = 10
+    // x = 20
+    // console.log(x)
+
+    // let x = 10
+    // if(5 > 3) {
+    //   console.log(x)
+    // }
+    // console.log(x)
+
+    // if(5 > 3) {
+    //   let x = 10
+    //   console.log(x)
+    // }
+
+    // let x = 10
+    // if(10 > 5) {
+    //   let x = 20
+    //   console.log(x + x)
+    // }
+    // console.log(x + x)
+
+    // if(10 > 5) {
+    //   let x = 20
+    //   console.log(x + x)
+    // }
+    // console.log(x + x)
+  </script>
+</body>
+</html>
