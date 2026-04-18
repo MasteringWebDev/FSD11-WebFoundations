@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+  /*
+    # Array: Collection of multiple elements
+      - Syntax: let array = [element1, element2, element3, ...]
+      - Different data type elements can exist within the same array
+      - Access elements using index
+        - Syntax: arr[index]
+        - Position vs Index
+          - Index = Position - 1
+          - Example:
+            P   I
+            1   0
+            2   1
+            3   2
+            ... ...
+            n   n-1
+      - Update element at a given index
+        - Syntax: arr[index] = newValue
+      - Iterate an araay (using loops concept)
+        for(let i=0; i < arr.length; i++) {
+          console.log(arr[i])
+        }
+
+      - Properties:
+        - length ***: Total number of elements
+      - Methods:
+        - indexOf() ***: Return the index of the first occurence of the element in the array, else returns - 1
+          - lastIndexOf(): Return the index of the last occurence of the element in the array, else returns - 1
+        - includes() ***: Return true if the element exists in the array, else returns false
+        - push(newElement) ***: Adds a new element to the end of the array
+          - Will update the original array
+          - Returns the updated length of the array
+        - pop ***: Remove the last element from the array
+          - Will update the original array
+          - Returns the element that was removed
+        - unshift(newElement): Adds a new element to the start of the array
+          - Will update the original array
+          - Returns the updated length of the array
+        - shift: Remove the first element from the array
+          - Will update the original array
+          - Returns the element that was removed
+        - concat(): Merge two Arrays
+          - Will not update the original array
+          - Returns the merged array
+        - slice(startIndex, endIndex) ***: Returns a sub array
+          - startIndex, endIndex: startIndex to endIndex - 1
+          - startIndex: startIndex to the end of the array
+          - No arguments: Complete array
+        - reverse(): Reverse the order of array elements
+          - Will update the original array
+          - Returns the reversed array
+        - join(): Join elements to form a string (Array -> String)
+          - Will not update the original array
+          - Returns the joined string
+          - Notes:
+            - No arguments: Join elements separated by commas
+            - Separator: Join elements separated by the separator
+  */
+    
+  // let arr1 = [1, 2, 3, 4, 5]
+  // let students = ['Joshua', 'Jesse', 'Glynnis']
+  // let arr2 = [true, false, false, true, true]
+  // let arr3 = [1, 'Joshua', true, null, undefined]
+
+  // let arr = [1, 2, 3, 4, 5]
+  // console.log(arr[4])
+
+  // let students = ['Joshua', 'Jesse', 'Glynnis']
+  // students[1] = 'Kibbe'
+  // console.log(students)
+  // console.log(students.length)
+
+  // let students = ['Joshua', 'Jesse', 'Glynnis']
+  // for(let i=0; i< students.length; i++) {
+  //   console.log(students[i])
+  // }
+
+  // Question: Find the sum of all elements of an array
+  // let arr = [5, 12, 14, 21, 43]
+  // let sum = 0
+  // for(let i=0; i< arr.length; i++) {
+  //   sum = sum + arr[i]
+  // }
+  // console.log(sum)
+
+  // Question: Find the product of all elements of an array
+  // let arr = [5, 12, 14, 21, 43]
+  // let product = 1
+  // for(let i=0; i< arr.length; i++) {
+  //   product = product * arr[i]
+  // }
+  // console.log(product)
+
+  // let arr = [1, 3, 6, 12, 19, 24, 37, 3]
+
+  // console.log(arr.indexOf(24))
+  // console.log(arr.indexOf(35))
+  // console.log(arr.indexOf(3))
+  // console.log(arr.lastIndexOf(3))
+
+  // console.log(arr.includes(6))
+  // console.log(arr.includes(-37))
+
+  // let arr = [10, 20, 30]
+  // let result = arr.push(40)
+  // console.log(result)
+
+  // let arr = []
+  // arr.push(20)
+  // arr.push(30)
+  // arr.push(50)
+  // console.log(arr)
+
+  // let arr = [25, 35, 45]
+  // let result = arr.pop()
+  // console.log(result)
+
+  // let students = ['Eric', 'Kibbe', 'Monita', 'Gylnnis']
+  // students.push('Jesse') // 'Eric', 'Kibbe', 'Monita', 'Gylnnis', 'Jesse'
+  // students.pop() // 'Eric', 'Kibbe', 'Monita', 'Gylnnis'
+  // students.pop() // 'Eric', 'Kibbe', 'Monita'
+  // students.pop() // 'Eric', 'Kibbe'
+  // students.pop() // 'Eric'
+  // console.log(students) // ['Eric']
+
+  // let students = ['Joshua', 'Kibbe']
+  // students.unshift('Jane')
+  // console.log(students)
+
+  // let students = ['Joshua', 'Kibbe']
+  // students.shift()
+  // console.log(students)
+
+  // let students = ['Eric', 'Kibbe', 'Monita'] // 'Eric', 'Kibbe', 'Monita'
+  // students.unshift('Gonzo') // 'Gonzo', 'Eric', 'Kibbe', 'Monita'
+  // students.push('Dara') // 'Gonzo', 'Eric', 'Kibbe', 'Monita', 'Dara'
+  // students.shift() // 'Eric', 'Kibbe', 'Monita', 'Dara'
+  // students.shift() // 'Kibbe', 'Monita', 'Dara'
+  // students.shift() // 'Monita', 'Dara'
+  // students.push('Jane') // 'Monita', 'Dara', 'Jane'
+  // students.pop() // 'Monita', 'Dara'
+  // students.pop() // 'Monita'
+  // console.log(students) // ['Monita']
+
+  // let arr1 = [1, 2, 3]
+  // let arr2 = [4, 5, 6]
+  // console.log(arr1.concat(arr2))
+
+  // let arr = [5, 10, 15, 20, 25, 30]
+  // console.log(arr.slice(1, 4))
+  // console.log(arr.slice(3))
+  // console.log(arr.slice())
+
+  // let arr = ['Jane', 'Gonzo', 'Eric', 'Canan', 'Cornell']
+  // arr.reverse()
+  // console.log(arr)
+
+  // let students = ['Andrea', 'Eric', 'Sonny', 'Jesse']
+  // console.log(students.join())
+  // console.log(students.join('-'))
+  // console.log(students.join(' '))
+
+  // let str = 'Andrea-Eric-Sonny-Jesse'
+  // console.log(str.split('-'))
+
+  // let str = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'
+  // console.log(str.split(' '))
+  </script>
+</body>
+</html>
