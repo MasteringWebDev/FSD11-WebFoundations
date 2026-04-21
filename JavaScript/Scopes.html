@@ -16,7 +16,7 @@
         - var: Variables
           - Can be re-declared
           - Can be re-assigned
-          - Global scope
+          - Function scope
         - let: Variables
           - Cannot be re-declared
           - Can be re-assigned
@@ -76,6 +76,25 @@
     //   console.log(x + x)
     // }
     // console.log(x + x)
+
+    // function abc() {
+    //   var x = 10
+    //   console.log(x)
+    // }
+    // abc()
+    // console.log(x)
+
+    // let x = 10
+    // function abc() {
+    //   let x = 20
+    //   if(10 > 5) {
+    //     let x = 30
+    //     console.log(x)
+    //   }
+    //   console.log(x)
+    // }
+    // abc()
+    // console.log(x)
   </script>
 </body>
 </html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+    /* 
+      # Functions:
+        - A set/block of code which is intended to perform a particular task
+        - Function can be executed as many number of times as needed
+        - Advantages of functions:
+          - Avoid repeated code (redundancy)
+            - DRY principle (Don't repeat yourself)
+          - Modular code (organized code)
+    
+        - For any function to be executed in JS, it needs two steps
+          - Declaration: Only done once
+            - Syntax:
+              function fun1() {
+                // code
+              }
+          - Invokation (Calling the function): Can be done 'n' number of times
+            - Syntax:
+              fun1()
+
+        - Type of functions:
+          - Standard function
+          - Anonymous function
+            - Does not have a name
+            - Used as a function expression
+            - Syntax:
+              const fun1 = function () {
+                // code
+              }
+        
+        - Parameters and arguments:
+          - Can make a function dynamic (For different I/P, you get different O/P)
+          - Parameters: Function variables (Values expected) in declaration
+          - Arguments: Actual values for function paramaters passed during invokation
+          - Syntax:
+            function fun1(a, b) { // Parameters
+              // code
+            }
+            func1(10, 20) // Arguments
+
+        - 'return' keyword:
+          - Return a value at the point where the function was invoked
+          - Terminates the function execution at the point where it is used
+    */
+
+    /* ------------------------- */
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+
+    // sayHi()
+
+    /* ------------------------- */
+    // function pizzaRecipe() {
+    //   console.log('1. Prepare the pizza base')
+    //   console.log('2. Add pizza sauce')
+    //   console.log('3. Add toppings')
+    //   console.log('4. Add cheeze')
+    //   console.log('5. Bake the pizza')
+    // }
+
+    // function groceryList() {
+    //   console.log('1. Eggs: 2 dozens')
+    //   console.log('2. Milk: 2 Ltrs')
+    //   console.log('3. Bread: 1 Loaf')
+    // }
+
+    // pizzaRecipe()
+    // groceryList()
+
+    /* ------------------------- */
+    // const week1Topics = function() {
+    //   console.log("Lecture 1: Basic Structure of HTML, Elements, Tags")
+    //   console.log("Lecture 2: Attributes, Lists, Links, Images, Tables")
+    //   console.log("Lecture 3: Forms and Input Elements, Semantic Tags")
+    // }
+    // week1Topics()
+
+    /* ------------------------- */
+    // function sum(num1, num2) {
+    //   console.log(num1 + num2)
+    // }
+
+    // sum(10, 20)
+    // sum(4758984, 4857958)
+    // sum(876, 345)
+
+    /* ------------------------- */
+    // function fun1() {
+    //   let x = 5
+    //   return x
+    // }
+    // console.log(fun1())
+
+    /* ------------------------- */
+    // # Question: Create a function to find product of three numbers
+    // function getProduct(num1, num2, num3) {
+    //   console.log(num1 * num2 * num3)
+    // }
+    
+    // getProduct(10, 20, 30)
+    // getProduct(475, 4545, 344)
+
+    /* ------------------------- */
+    // # Question: Create a function which takes firstName and lastName and returns the full name of the person
+    // function getFullName(firstName, lastName) {
+    //   console.log(firstName + ' ' + lastName)
+    // }
+
+    // getFullName('Sonny', 'Brown')
+    // getFullName('Monita', 'Sharma')
+
+    /* ------------------------- */
+    /* # Question: Create a function which takes a number as a paramater and logs whether it is even or odd
+      - I/P: 1 O/P: ODD
+      - I/P: 4 O/P: EVEN
+      - I/P: 3 O/P: ODD
+    */
+
+    // function checkEvenOrOdd(num1) {
+    //   if(num1 % 2 == 0) {
+    //     console.log('EVEN')
+    //   } else {
+    //     console.log('ODD')
+    //   }
+    // }
+
+    // checkEvenOrOdd(5)
+    // checkEvenOrOdd(4)
+    // checkEvenOrOdd(3)
+
+    /* ------------------------- */
+    // # Question: Create a function that returns the sum of two numbers
+    // function sum(num1, num2) {
+    //   let result = num1 + num2
+    //   return result
+    // }
+
+    // console.log(sum(5, 10))
+
+    /* ------------------------- */
+    /* # Question: Create a function which takes a number as a paramater and returns whether it is prime or not
+      - I/P: 2 O/P: PRIME
+      - I/P: 3 O/P: PRIME
+      - I/P: 4 O/P: NOT PRIME
+    */
+
+    // SOLUTION 1
+    // function checkPrime(num1) {
+    //   let factors = 0
+    //   for(let i = 1; i <= num1; i++) {
+    //     if(num1 % i == 0) {
+    //       factors++
+    //     }
+    //   }
+    //   if(factors == 2) {
+    //     return 'PRIME'
+    //   } else {
+    //     return 'NOT PRIME'
+    //   }
+    // }
+    // console.log(checkPrime(6))
+
+    // SOLUTION 2
+    // function checkPrime(num1) {
+    //   if(num1 < 2) {
+    //     return 'NEITHER PRIME NOR COMPOSITE'
+    //   }
+
+    //   for(let i = 2; i < num1; i++) {
+    //     if(num1 % i == 0) {
+    //       return 'NOT PRIME'
+    //     }
+    //   }
+    //   return 'PRIME'
+    // }
+    // console.log(checkPrime(-1))
+
+    /* ------------------------- */
+    // # Question: Create a function that returns the average of two numbers
+    // function getAverage(num1, num2) {
+    //   let sum = num1 + num2
+    //   let average = sum / 2
+    //   return average
+    // }
+
+    // console.log(getAverage(5, 10))
+    // console.log(getAverage(3759, 349830953))
+
+    /* ------------------------- */
+    /* # Question: Create a function that returns the average of numbers in the array passed in the arguments
+      - I/P: [2, 4, 6, 8, 10] O/P: 6
+      - I/P: [3, 7, 2, 5] O/P: 4.25
+    */
+
+    // function getArrayAverage(arr) {
+    //   let sum = 0
+    //   for(let i=0; i < arr.length; i++) {
+    //     sum += arr[i]
+    //   }
+    //   return sum/arr.length
+    // }
+
+    // console.log(getArrayAverage([3, 7, 2, 5]))
+    /* ------------------------- */
+  </script>
+</body>
+</html>
