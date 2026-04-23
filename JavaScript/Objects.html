@@ -35,8 +35,18 @@
           - Properties: Keys holding any value other than function
           - Method: Keys holding functions as a reference
 
+        - Inbuilt object methods:
+          - Object.keys(obj1): Returns an array of keys belonging to an object
+          - Object.values(obj1): Returns an array of values belonging to an object
+          - Object.entries(obj1): Returns an array of [key, value] pairs belonging to an object
+
+        - JSON: JavaScript Object Notation
+          - JSON.stringify(): Convert JS object to JSON string
+          - JSON.parse(): Convert a JSON string to JS object
+
         - Additional note:
           - Arrays are special type of objects, where keys are numerical
+          - [object Object]: Object in HTML document flow without converting it to string using JSON.stringify()
 
       -----------------
       # Constructor: Create objects of similar type
@@ -79,6 +89,8 @@
     // delete janeDetails.course
     // console.log(janeDetails)
 
+    /* -------------------- */
+
     // let ericDetails = {
     //   name: 'Eric M',
     //   batch: 11,
@@ -109,6 +121,42 @@
     // let str2 = new String('Kibbe')
     // console.log(str2)
 
+    /* -------------------- */
+    // let jesseDetails = {
+    //   name: 'Jesse',
+    //   batch: 11,
+    //   isCurrentlyWorking: true,
+    //   vehicleNo: null,
+    //   hobbies: ['Swimming', 'Dancing', 'Singing'],
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   },
+    //   sayHi: function(friend) {
+    //     console.log('Hi, ' + friend + '!')
+    //   }
+    // }
+
+    // console.log(Object.keys(jesseDetails))
+    // console.log(Object.values(jesseDetails))
+    // console.log(Object.entries(jesseDetails))
+
+    // const entries = Object.entries(jesseDetails)
+    // for(let i=0; i<entries.length; i++) {
+    //   console.log(entries[i][0], ':', entries[i][1])
+    // }
+
+    /* -------------------- */
+    // let obj1 = {
+    //   a: 5,
+    //   b: 10
+    // }
+
+    // document.write(JSON.stringify(obj1))
+    // console.log(JSON.stringify(obj1))
+
+    // console.log(JSON.parse('{"a":5,"b":10}'))
   </script>
 </body>
 </html>
