@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this keyword</title>
+</head>
+<body>
+  <script>
+    /* 
+      # this keyword: Refers to it's immediate parent object
+        - Within a method of an object: Refers to the parent object
+        - In global scope: Refers to the window object
+
+        - Additional notes:
+          - Window object is "Browser Object Model (BOM)"
+            - Complete information about the webpage and the broswer details
+            - Reserved keyword: window
+    */
+
+    // let jesseDetails = {
+    //   name: 'Jesse',
+    //   batch: 11,
+    //   isCurrentlyWorking: true,
+    //   vehicleNo: null,
+    //   hobbies: ['Swimming', 'Dancing', 'Singing'],
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   },
+    //   sayHi: function(friend) {
+    //     console.log('Hi, ' + friend + '!')
+    //   },
+    //   introduction: function() {
+    //     console.log("Hi, my name is " + this.name + ". I'm from batch no " + this.batch + ". My hobbies are " + this.hobbies.join(", ") + '.' )
+    //   }
+    // }
+
+    // let daraDetails = {
+    //   name: 'Dara',
+    //   batch: 10,
+    //   isCurrentlyWorking: false,
+    //   vehicleNo: 'ABC10123',
+    //   hobbies: ['Programming', 'Swimming'],
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   },
+    //   sayHi: function(friend) {
+    //     console.log('Hi, ' + friend + '!')
+    //   },
+    //   introduction: function() {
+    //     console.log("Hi, my name is " + this.name + ". I'm from batch no " + this.batch + ". My hobbies are " + this.hobbies.join(", ") + '.' )
+    //   }
+    // }
+
+    // jesseDetails.introduction()
+    // daraDetails.introduction()
+
+    // console.log(this) // window object
+    // console.log(window)
+  </script>
+</body>
+</html>
