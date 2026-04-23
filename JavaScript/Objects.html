@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+      # Objects: Collection of key value pairs
+        - key (string)
+        - value (any data type)
+        - Syntax:
+          let obj1 = {
+            key1: value1,
+            key2: value2,
+            key3: value3,
+            ...
+          }
+
+        - Access values using keys
+          - Syntax 1: obj1.key1
+          - Syntax 2: obj1['key1']
+
+        - Add/Update values using keys
+          - Syntax 1: obj1.key1 = value1
+          - Syntax 2: obj1['key1'] = value1
+
+        - Delete a key
+          - 'delete' keyword
+          - Syntax: delete obj1.key1
+
+        - Properties and Methods (Keys)
+          - Properties: Keys holding any value other than function
+          - Method: Keys holding functions as a reference
+
+        - Additional note:
+          - Arrays are special type of objects, where keys are numerical
+
+      -----------------
+      # Constructor: Create objects of similar type
+        - Create a new object from constructor: 'new' keyword
+        - Inbuilt constructors:
+          - Number()
+          - String()
+          - Boolean()
+
+      # JavaScript is an object-based language
+        - Primitive data types were derived from non-primitive object equivalent
+        - Wrapper objects for primitive values: JS under the hood, wraps the primitive value with the non-primitive object equivalent
+          - Reference: https://2ality.com/2022/02/wrapper-objects.html
+    */
+
+    // let janeDetails = {
+    //   fullName: "Jane C",
+    //   course: "FSD Course",
+    //   batch: 11,
+    //   isGraduated: true,
+    //   carBrand: null
+    // }
+
+    // console.log(janeDetails)
+    // console.log(janeDetails['fullName'])
+    // console.log(janeDetails['course'])
+    // console.log(janeDetails['batch'])
+    // console.log(janeDetails['isGraduated'])
+    // console.log(janeDetails['carBrand'])
+
+    // console.log(janeDetails.fullName)
+    // console.log(janeDetails.course)
+    // console.log(janeDetails.batch)
+    // console.log(janeDetails.isGraduated)
+    // console.log(janeDetails.carBrand)
+
+    // janeDetails.course = 'Frontend Development'
+    // janeDetails.city = 'New York City'
+
+    // delete janeDetails.course
+    // console.log(janeDetails)
+
+    // let ericDetails = {
+    //   name: 'Eric M',
+    //   batch: 11,
+    //   city: 'New York City',
+    //   sayHi: function() {
+    //     console.log('Hi')
+    //   }
+    // }
+
+    // console.log(ericDetails.name)
+    // console.log(ericDetails.batch)
+    // console.log(ericDetails.city)
+    // ericDetails.sayHi()
+
+    /* -------------------- */
+    // let num1 = 5
+    // let num2 = new Number(5)
+    // console.log(num1)
+    // console.log(num2.valueOf())
+
+    // let str1 = 'Kibbe'
+    // let str2 = new String('Kibbe')
+    // console.log(str1)
+    // console.log(str2.valueOf())
+
+    // let str1 = 'Kibbe'
+    // console.log(str1.toUpperCase()) // JS under the hood, wraps this string value as a String object so that properties and methods can be used
+    // let str2 = new String('Kibbe')
+    // console.log(str2)
+
+  </script>
+</body>
+</html>
