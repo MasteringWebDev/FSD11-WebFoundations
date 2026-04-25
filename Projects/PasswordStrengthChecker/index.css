@@ -1,0 +1,7 @@
+body {
+  background-color: #C5CBE3;
+}
+
+#invalid-password-alert {
+  display: none;
+}
