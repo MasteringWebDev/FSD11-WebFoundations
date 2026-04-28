@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Execution Context</title>
+</head>
+<body>
+  <script>
+    /* 
+      # Execution Context:
+        - An environment where JS code runs
+        - Provided by JavaScript Engine
+        - Types of execution contexts:
+          - Global Execution Context (GEC)
+          - Function Execution Context(s) (FEC)
+        - Execution phases
+          1. Memory allocation phase
+          2. Code execution phase
+
+      # JavaScript Memory
+        - Types:
+          - Stack Memory: Primitive values (Value are assigned)
+          - Heap Memory: Non-primitive values (Reference is assigned)
+
+        - Resources:
+          - JS visualizer: https://pythontutor.com/visualize.html#mode=edit
+    */
+
+    /* ------------------ */
+    // var num1 = 10
+    // var num2 = 20
+
+    // console.log(num1 + num2)
+
+    // var num3 = 30
+
+    // console.log(num1 + num2 + num3)
+
+    /*
+      Current phase running: 2. Code execution phase
+      JS Memory
+      - GEC
+        - num1: 10
+        - num2: 20
+        - num3: 30
+
+    */
+
+    /* ------------------ */
+    // var num1 = 5
+    // var arr = [2, 8, 3, 6, 4]
+    // console.log(num1 * num1)
+    // console.log(arr[0])
+
+    /* ------------------ */
+    // var x = 10
+    // var y = 20
+
+    // function abc() {
+    //   var a = 50
+    //   var b = 100
+    //   console.log(a + b)
+    // }
+
+    // console.log(x + y)
+
+    // abc()
+
+    /*
+      Current phase running: 2. Code execution phase
+      JS Memory
+      - GEC
+        - x: 10
+        - y: 20
+        - abc: -> f()
+      - FEC
+        - a: 50
+        - b: 100
+    */
+  </script>
+</body>
+</html>
