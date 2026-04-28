@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoisting</title>
+</head>
+<body>
+  <script>
+    /*
+      # Hoisting: Variables and function declarations are moved to the top of the code before execution
+        - Access variables and functions before declaration
+        - Only declaration is hoisted; Initialization and assignments are not hoisted
+
+        - Temporal Dead Zone (TDZ):
+          - let and const declarations are hoisted, but they continue to remain in TDZ until it is assigned with a value
+          - JavaScript is aware of the variable/constant created using let/const, but it cannot be accesed until it has been initialized
+      
+        - Cheat code: "only 'var' and 'function' declarations are hoisted"
+
+    */
+
+    // // Access a variable before declaration
+    // console.log(x)
+    // var x
+
+    // // Invoke a function before declaration
+    // abc()
+    // function abc() {
+    //   console.log('abc')
+    // }
+
+    // Hoisting (Visualize)
+    // var x
+    // function abc() {
+    //   console.log('abc')
+    // }
+    // console.log(x)
+    // abc()
+
+    /* ---------------- */
+    // console.log(x)
+    // var x
+    // abc()
+    // function abc() {
+    //   console.log('abc')
+    // }
+
+    /*
+      Current phase running: 1. Memory allocation phase
+      JS Memory
+      - GEC
+        - x: undefined
+        - abc: -> f()
+    */
+    /* ---------------- */
+    // console.log(x) // 'undefined', because only 'declaration' is hoisted
+    // var x = 5
+
+    /* ---------------- */
+
+    let num1 = 5
+    console.log(num1)
+  </script>
+</body>
+</html>
