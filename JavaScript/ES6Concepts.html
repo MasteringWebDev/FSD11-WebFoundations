@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Concepts</title>
+</head>
+<body>
+  <script>
+    /*
+      # ES6 Concepts:
+        - ES: ECMAScript
+        - ES6: JavaScript 6th Version (2015)
+        - Several 'Syntactic sugar' (minimalist syntaxes) were introduced in this Version
+        - ES6 is used extensively in JS libraries like React.js, Vue.js, Angular.js, etc.
+
+        - Concepts/Syntaxes:
+          1. let and const (Block scope) ***
+            - let: Declare variables
+            - const: Declare constants
+
+          2. Template literals/strings (``)
+            - It starts and ends with backticks (`)
+            - Supports multi-line strings and expressions
+            - Syntax to use variables/expressions within template strings
+              - `${variable}`
+
+          3. Default parameters
+            - Default values can be provided to function parameters
+            - Default values are applied if arguments are not passed for those parameters
+            - Syntax:
+              function abc(a = 0, b = 0) {}
+
+          4. Arrow functions (() => {}) ***
+            - Syntactic sugar for anonymous functions
+            - Syntax:
+              const abc = () => {
+                console.log('abc')
+              }
+            - Single line arrow function:
+              - Scenarios:
+                - Function which has just a single expression (Skip {})
+                - Function which has single expression + return value (Skip {} and return)
+              - Syntax: 
+                - Scenario 1
+                  const abc = () => {
+                    console.log('abc')
+                  }
+                  const abc = () => console.log('abc')
+                - Scenario 2
+                  const abc = () => {
+                    return 5
+                  }
+                  const abc = () => 5
+            - Additional note: Skip () if only 1 paramater exist
+          
+          5. Object property shorthand ({ p1, p2 })
+            - Whenever the object property name and the name of the variable assigned to it are the same, { key: value } can be just declared as { key }
+
+          6. Destructuring ({ p1 } = obj)
+            - Create variables having the same name as the property and have the variable value = value of the property
+            - Syntax:
+              const { a, b } = obj
+              - Different variable name for any property
+                const { a: variable1, b: variable2 } = obj
+
+          7. Spread Operator (...) ***
+            - Used to select all elements within arrays or objects
+            - Used with arrays and objects
+            - Syntax:
+              - Can be used to create shallow copy:
+                [...arr] (Arrays)
+                {...obj} (Objects)
+
+
+    */
+
+    /* ----------------------- */
+    // let text = "Sonny says that the batch was 'awesome'"
+    // console.log(text)
+    // let text = 'Sonny said - "I want to build a project with Joshua"'
+    // console.log(text)
+    // let text = `Sonny said - "I want to build 'Personal portfolio' project with Joshua"`
+    // console.log(text)
+
+
+    // console.log(`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+    
+    // Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting`)
+
+
+    // let name = 'Cornell'
+    // let str = `My name is ${name}`
+    // console.log(str)
+
+    // let jesseDetails = {
+    //   name: 'Jesse',
+    //   batch: 11,
+    //   isCurrentlyWorking: true,
+    //   vehicleNo: null,
+    //   hobbies: ['Swimming', 'Dancing', 'Singing'],
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   }
+    // }
+
+    // console.log("Hi, my name is " + jesseDetails.name + ". I'm from " + jesseDetails.batch + " batch. My hobbies are " + jesseDetails.hobbies.join(', ') + ". I live in " + jesseDetails.address.line1 + ", " + jesseDetails.address.city + ", " + jesseDetails.address.country + ".")
+
+    // console.log(`Hi, my name is ${jesseDetails.name}. I'm from ${jesseDetails.batch} batch. My hobbies are ${jesseDetails.hobbies.join(', ')}. I live in ${jesseDetails.address.line1}, ${jesseDetails.address.city}, ${jesseDetails.address.country}.`)
+
+    /* ----------------------- */
+    // function add(num1 = 0, num2 = 0, num3 = 0) {
+    //   let sum = num1 + num2 + num3
+    //   console.log(sum)
+    // }
+
+    // add(10, 20, 30)
+    // add(873948, 23989320, 239892)
+    // add(20, 50)
+    // add(40)
+    // add()
+
+
+    // function fullName(firstName, lastName = ''){
+    //   console.log(`${firstName} ${lastName}`)
+    // }
+
+    // fullName('Monita', 'Sharma')
+    // fullName('Monita')
+
+    /* ----------------------- */
+    // const add = (num1, num2) => {
+    //   console.log(num1 + num2)
+    // }
+
+    // const add = (num1, num2) => console.log(num1 + num2)
+    // const subtract = (num1, num2) => console.log(num1 - num2)
+    // const multiply = (num1, num2) => console.log(num1 * num2)
+    // const divide = (num1, num2) => console.log(num1 / num2)
+
+    // const add = (num1, num2) => num1 + num2
+    // const subtract = (num1, num2) => num1 - num2
+    // const multiply = (num1, num2) => num1 * num2
+    // const divide = (num1, num2) => num1 / num2
+    // console.log(add(5, 10))
+
+    // const average = (num1, num2) => console.log((num1 + num2) / 2)
+    // average(50, 100)
+    // average(28719381, 23823328)
+
+    // const isEvenOrOdd = num => {
+    //   if(num % 2 == 0) {
+    //     console.log("EVEN")
+    //   } else {
+    //     console.log("ODD")
+    //   }
+    // }
+    // isEvenOrOdd(5)
+    // isEvenOrOdd(4)
+
+    /* ----------------------- */
+    // let firstName = 'Sonny'
+    // let lastName = 'Brown'
+    // let batch = 11
+    // let percentage = 92
+
+    // // let sonnyDetails = {
+    // //   firstName: firstName,
+    // //   lastName: lastName,
+    // //   batch: batch,
+    // //   percentage: percentage
+    // // }
+
+    // let sonnyDetails = { firstName, lastName, batch, percentage }
+    // console.log(sonnyDetails)
+
+    /* ----------------------- */
+    // let jesseDetails = {
+    //   name: 'Jesse',
+    //   batch: 11,
+    //   isCurrentlyWorking: true,
+    //   vehicleNo: null,
+    //   hobbies: ['Swimming', 'Dancing', 'Singing'],
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   }
+    // }
+
+    // let name = jesseDetails.name
+    // let batch = jesseDetails.batch
+    // let hobbies = jesseDetails.hobbies
+    // let address = jesseDetails.address
+
+    // let {
+    //   name,
+    //   batch,
+    //   hobbies,
+    //   address
+    // } = jesseDetails
+
+    // console.log(`Hi, my name is ${name}. I'm from Batch ${batch}. My hobbies are ${hobbies.join(', ')}. I live in ${address.line1}, ${address.city}, ${address.country}.`)
+
+    /* ----------------------- */
+    // let arr1 = [2, 4, 6, 8, 10]
+    // console.log(arr1)
+    // console.log(...arr1)
+    // console.log([...arr1])
+
+    // const obj1 = { a: 5, b: 10 }
+    // console.log(obj1)
+    // console.log({ ...obj1 })
+
+    /* ----------------------- */
+    // # Non-primitive assignment: Any changes to one non-primitive value using one variable will be reflected by the other variable as well because both are pointing to the same non-primitive value in the heap memory
+    // - Problem statement: Create a copy of array given below
+    // let arr1 = [2, 4, 6, 8, 10]
+
+    // // Method 1: Assign
+    // let arr2 = arr1 // arr2 and arr1 are pointing to the same array in the heap memory, hence any changes to one will reflect in the other variable as well
+    // // console.log(arr2)
+
+    // // Method 2: Spread Operator with []
+    // let arr3 = [...arr1] // Shallow copy 
+    // // console.log(arr3)
+
+    // arr1[0] = 1000 // [1000, 4, 6, 8, 10]
+    // console.log(arr1)
+    // console.log(arr2)
+    // console.log(arr3)
+
+    
+    // let obj1 = { a: 5, b: 10 }
+    // let obj2 = obj1
+    // obj1.a = 100
+    // console.log(obj2)
+
+    // let obj1 = { a: 5, b: 10 }
+    // let obj2 = {...obj1} // Shallow copy
+    // obj1.a = 100
+    // console.log(obj2)
+
+    /* ----------------------- */
+    /*
+      # Shallow copy vs Deep copy
+        - Shallow copy:
+          - First order properties/elements are copied
+          - Best for simple arrays and objects
+          - Syntax: Using spread ... operator
+        - Deep copy:
+          - Complete copy of the properties across all levels/orders
+          - Best for complex arrays and objects
+          - Syntax: JSON.
+    */
+
+    // let jesseDetails = {
+    //   name: 'Jesse',
+    //   address: {
+    //     line1: 'XYZ Street',
+    //     city: 'New York City',
+    //     country: 'United States'
+    //   }
+    // }
+
+    // let jesseDetails2 = { ...jesseDetails } // Shallow copy (First order properties are copied)
+    // jesseDetails.name = 'Sonny'
+    // jesseDetails.address.country = 'United Kingdom'
+    // console.log(jesseDetails2)
+
+    // let jesseDetails2 = JSON.parse(JSON.stringify(jesseDetails)) // Deep copy (Complete copy of the properties across all levels/orders)
+    // jesseDetails.name = 'Sonny'
+    // jesseDetails.address.country = 'United Kingdom'
+    // console.log(jesseDetails2)
+
+  </script>
+</body>
+</html>
