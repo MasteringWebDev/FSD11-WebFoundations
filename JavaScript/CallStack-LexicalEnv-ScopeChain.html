@@ -8,7 +8,7 @@
 <body>
   <script>
     /*
-      # Call Stack:
+      # Call Stack: JS handles function execution by pushing/popping function execution context(s) into/from the call stack
         - Stack data structure: LIFO (Last in, First out)
 
 
@@ -55,6 +55,50 @@
     // }
 
     // abc()
+
+    /* -------------------- */
+    /*
+      # Lexical Environment:
+        - "Lexical" means where a specific identifier is declared in the code
+          - "Lexical environment": An environment that stores variables + references to it's outer scope
+        - Inner scopes can access variables declared in the outer scopes (outer scope in within the lexical environment), but vice-versa is not possible
+    */
+
+    // let num1 = 5
+
+    // function abc() {
+    //   let num2 = 10
+
+    //   if(true) {
+    //     let num3 = 100
+    //     console.log(num1, num2, num3) // All 3 numbers are acccessible here is because those are within the lexical environment
+    //   }
+    // }
+
+    // abc()
+
+    /*
+      # Scope chain:
+        - Used to resolve identifier values. If an identifier is not found in the current scope, JS checks it in the parent scope, if not, continues to check up the ancestor scope until the global scope
+    */
+
+    // let num1 = 5
+
+    // function abc() {
+    //   let num2 = 10
+
+    //   function def() {
+    //     let num3 = 100
+    //     console.log(num1, num2, num3)
+    //   }
+
+    //   def()
+    // }
+
+    // abc()
+
+    // Scope chain of def: def -> abc -> Global
+    // Scope chain of abc: abc -> Global
   </script>
 </body>
 </html>
