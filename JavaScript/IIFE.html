@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIFE</title>
+</head>
+<body>
+  <script>
+    /*
+      # IIFE (Immediately Invoked Function Expression):
+        - a.k.a Self-invoking functions
+        - A function which gets invoked during declaration itself
+        - Syntax:
+          (function (){
+            // code
+          })()
+        - Use cases:
+          - Avoids global scope pollution (Block scope didn't exist before ES6)
+          - Hide secret keys/values
+    */
+
+    // (function () {
+    //   console.log('Hi')
+    // })()
+
+    // // Print the student's name in lowercase
+    // (function() {
+    //   var student = prompt('Please enter your name to print it in lowecase')
+    //   console.log(student.toLowerCase())
+    // })();
+
+    // // Print student's last name
+    // (function() {
+    //   var student = prompt('Please enter your name to return your last name')
+    //   console.log(student.split(' ')[1])
+    // })();
+
+    // (function() {
+    //   var secret = 'some-super-secret-key-123'
+    //   // API request using secret key
+    // })()
+  </script>
+</body>
+</html>
