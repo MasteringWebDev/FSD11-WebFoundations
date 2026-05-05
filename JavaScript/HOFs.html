@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOFs</title>
+</head>
+<body>
+  <script>
+    /*
+      # HOFs (Higher Order Functions)
+        - A function that:
+          - is passed as an argument to another function (Callbacks)
+          - returns another function (Closures)
+    */
+
+    /* 
+      # Callbacks: A function passsed as an argument to another function
+        - Syntax:
+          - Syntax 1:
+            func1(func2)
+          - Syntax 2:
+            func1(function () {
+              // callback code
+            })
+
+    */
+
+    // function sum(num1, num2) {
+    //   console.log(num1 + num2)
+    // }
+    // sum(5, 10) // Number passed as an argument
+
+    // function fullName(firstName, lastName) {
+    //   console.log(`${firstName} ${lastName}`)
+    // }
+    // fullName('Andrea', 'Batista') // String passed as an argument
+
+    // function isGraduate(bool1) {
+    //   console.log(bool1 ? 'Student is a graduate' : 'Student is undergraduate')
+    // }
+    // isGraduate(true) // Boolean passed as an argument
+
+    // function getAverageMarks(marks) {
+    //   let totalMarks = 0
+    //   for(let i=0; i<marks.length; i++) {
+    //     totalMarks += marks[i]
+    //   }
+    //   console.log(totalMarks/marks.length)
+    // }
+    // getAverageMarks([80, 90, 70, 60, 80]) // Array passed as an argument
+
+    // function printStudentDetails(student) {
+    //   console.log(`Hi I'm ${student.name}. I'm from batch ${student.batch}. I'm learning ${student.course} course.`)
+    // }
+    // printStudentDetails({ // Objects passed as an argument
+    //   name: 'Kibbe',
+    //   batch: 12,
+    //   course: 'MERN Stack'
+    // })
+
+    // Syntax 1
+    // function func1(callback) {
+    //   console.log('Function 1')
+    //   callback()
+    // }
+    // function func2() {
+    //   console.log('Function 2')
+    // }
+    // func1(func2) // Function passed as an argument to another function
+
+    // Syntax 2
+    // function func1(callback) {
+    //   console.log('Function 1')
+    //   callback()
+    // }
+    // func1(function () {
+    //   console.log('Function 2')
+    // }) // Function passed as an argument to another function
+
+    /* ------------------- */
+    /* 
+      # Closures ***: Inner function continues to have access to the outer function variables even after the outer function has completed execution
+        - In easy words,
+          - Closure = [Function's scope + it's lexical environment]
+          - Inner function "remembers" it's lexical environment
+
+    */
+
+    // function func1() {
+    //   console.log('Function 1')
+
+    //   function func2() {
+    //     console.log('Function 2')
+    //   }
+    //   func2()
+    // }
+
+    // func1()
+
+    /* ----- */
+    // function func1() {
+    //   let x = 10
+
+    //   function func2() {
+    //     console.log(x)
+    //   }
+    //   func2()
+    // }
+
+    // func1()
+
+    /* ----- */
+    // const outer = function () {
+    //   console.log('OUTER FUNCTION')
+
+    //   const inner = function() {
+    //     console.log('INNER FUNCTION')
+    //   }
+    //   return inner
+    // }
+
+    // const x = outer()
+    // x()
+    // outer()() // Another way to invoke the inner function
+
+    /* ----- */
+    // const outer = function () {
+    //   let x = 10
+
+    //   const inner = function() {
+    //     console.log(x)
+    //   }
+    //   return inner
+    // }
+
+    // const abc = outer()
+    // abc()
+    /* ------------------- */
+  </script>
+</body>
+</html>
