@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Higher Order Methods</title>
+</head>
+<body>
+  <script>
+    /* 
+      # Array Higher Order Methods:
+        - Methods which use callback syntax
+
+        1. forEach() ***
+          - Syntax:
+            arr.forEach((element) => {
+              // Code which executes for each element
+            })
+          - Iterates through the elements of the array and executes callback for each element
+          - Callback parameters:
+            - 1st parameter: Element
+            - 2nd parameter: Index
+          - Does not return anything (undefined)
+    */
+
+    /* ---------------------------------------- */
+    // Example 1: Simple iteration of array elements
+    // let arr = [1, 3, 5, 7, 9]
+
+    // arr.forEach((element) => {
+    //   console.log(element)
+    // })
+
+    // arr.forEach(element => console.log(element))
+
+    /* --------------- */
+    // let students = ['Eric', 'Kibbe', 'Gonzo', 'Sonny', 'Monita']
+    // students.forEach((student) => {
+    //   console.log(student)
+    // })
+    // students.forEach((student) => console.log(student))
+
+    /* ---------------------------------------- */
+    // Example 2: Calculate the sum of elements of an array
+    // let nums = [32, 56, 43, 19, 24]
+
+    // let sum = 0
+    // nums.forEach((num) => {
+    //   sum = sum + num
+    // })
+    // nums.forEach(num => sum = sum + num)
+    // console.log(sum)
+
+    /* ---------------------------------------- */
+    // Example 3: Find the largest number in the array
+    // let nums = [32, 56, 43, 19, 24]
+    // let max = nums[0]
+    // nums.forEach((num) => {
+    //   if(num > max) {
+    //     max = num
+    //   }
+    // })
+    // console.log(max)
+
+    /* ---------------------------------------- */
+    // Example 4: Filter even numbers from an array
+    // let inputArr = [3673, 67348, 2484, 9498984, 549849]
+    // let evenNums = []
+    // inputArr.forEach((num) => {
+    //   if(num % 2 == 0) {
+    //     evenNums.push(num)
+    //   }
+    // })
+    // console.log(evenNums)
+
+    /* ---------------------------------------- */
+    /* 
+      Example 5: For the given input array, return another array where each element is element of the input array multiplied by 2
+      - I/P: [56, 43, 78, 92, 32]
+      - O/P: [112, 86, 156, 184, 64]
+    */
+
+    // const arr = [56, 43, 78, 92, 32]
+    // const resultArr = []
+
+    // arr.forEach(num => {
+    //   let modifiedNum = num * 2
+    //   resultArr.push(modifiedNum)
+    // })
+    // arr.forEach(num => resultArr.push(num * 2))
+
+    // console.log(resultArr)
+
+    /* ---------------------------------------- */
+    /* ---------------------------------------- */
+    /*
+      2. filter() ***
+          - Syntax:
+            arr.filter((element) => {
+              return "condition"
+            })
+          - Iterates through the elements of the array and executes callback for each element
+          - Callback parameters:
+            - 1st parameter: Element
+            - 2nd parameter: Index
+          - Returns a filtered array based on the condition provided. For each element, a boolean value is returned by the callback; If true, element is added to the filtered array, else the element is skipped
+            - Does not modify the original array
+    */
+    /* ---------------------------------------- */
+      // Example 1: Filter even numbers from an array
+      // let inputArr = [3673, 67348, 2484, 9498984, 549849]
+
+      // let evenNums = inputArr.filter((num) => {
+      //   return num % 2 == 0
+      // })
+
+      // // Using single line arrow function syntax
+      // // let evenNums = inputArr.filter(num => num % 2 == 0)
+
+      // console.log(evenNums)
+
+      /* ---------------------------------------- */
+      // Example 2: Filter student names which have exactly 5 characters
+      // const students = ['Eric', 'Kibbe', 'Sonny', 'Andrea', 'Dara']
+
+      // const filteredStudents = students.filter(student => {
+      //   return student.length == 5
+      // })
+
+      // // Using single line arrow function syntax
+      // // const filteredStudents = students.filter(student => student.length == 5)
+
+      // console.log(filteredStudents)
+
+      /* ---------------------------------------- */
+      // Example 3: Filter students who are from batch 11
+      // const students = [
+      //   {
+      //     name: 'Andrea',
+      //     batch: 10,
+      //     course: 'MERN'
+      //   },
+      //   {
+      //     name: 'Dara',
+      //     batch: 11,
+      //     course: 'MEAN'
+      //   },
+      //   {
+      //     name: 'Eric',
+      //     batch: 12,
+      //     course: 'MEVN'
+      //   },
+      //   {
+      //     name: 'Gonzo',
+      //     batch: 11,
+      //     course: 'MERN'
+      //   },
+      //   {
+      //     name: 'Jesse',
+      //     batch: 11,
+      //     course: 'MEVN'
+      //   }
+      // ]
+
+      // // Using single line arrow function syntax
+      // // const batch11Students = students.filter(student => student.batch == 11)
+
+      // console.log(batch11Students)
+
+      /* ---------------------------------------- */
+      /* ---------------------------------------- */
+      /*
+        3. map() ***
+            - Syntax:
+              arr.map((element) => {
+                return "modifiedElement"
+              })
+            - Iterates through the elements of the array and executes callback for each element
+            - Callback parameters:
+              - 1st parameter: Element
+              - 2nd parameter: Index
+            - Returns a modified array based on the return value provided on iteration for each element
+              - Does not modify the original array
+      */
+      /* ---------------------------------------- */
+      /* 
+        Example 1: For the given input array, return another array where each element is element of the input array multiplied by 2
+        - I/P: [56, 43, 78, 92, 32]
+        - O/P: [112, 86, 156, 184, 64]
+      */
+
+      // const arr = [56, 43, 78, 92, 32]
+
+      // const resultArr = arr.map(num => {
+      //   return num * 2
+      // })
+
+      // // Using single line arrow function syntax
+      // // const resultArr = arr.map(num => num * 2)
+
+      // console.log(resultArr)
+
+      /* ---------------------------------------- */
+      /* 
+        Example 2: For the given input array, return another array where each element is the square of the element of the input array
+        - I/P: [2, 4, 3, 5, 7]
+        - O/P: [4, 16, 9, 25, 49]
+      */
+
+      // const arr = [2, 4, 3, 5, 7]
+
+      // let squaresArr = arr.map(num => {
+      //   return num * num
+      // })
+      // console.log(squaresArr)
+
+      // console.log(arr.map(num => num * num))
+
+      /* ---------------------------------------- */
+      /* 
+        Example 3: For the given input array which has firstName and lastName of users, return another array with fullname of users
+      */
+
+      // const users = [
+      //   {
+      //     firstName: 'Gonzo',
+      //     lastName: 'Bombas'
+      //   },
+      //   {
+      //     firstName: 'Sonny',
+      //     lastName: 'Brown'
+      //   },
+      //   {
+      //     firstName: 'Andrea',
+      //     lastName: 'Batista'
+      //   }
+      // ]
+
+      // const userFullNames = users.map(user => {
+      //   return `${user.firstName} ${user.lastName}`
+      // })
+      // console.log(userFullNames)
+
+      // console.log(users.map(user => `${user.firstName} ${user.lastName}`))
+
+      /* ---------------------------------------- */
+      /* ---------------------------------------- */
+      /* 
+        Question 1: Given list of users, return the users who are eligible to vote
+      */
+      // const users = [
+      //   {
+      //     name: 'Jesse',
+      //     age: 19
+      //   },
+      //   {
+      //     name: 'Monita',
+      //     age: 17
+      //   },
+      //   {
+      //     name: 'Kibbe',
+      //     age: 18
+      //   },
+      //   { 
+      //     name: 'Sonny',
+      //     age: 20
+      //   }
+      // ]
+
+      // const voters = users.filter(user => user.age >= 18)
+      // console.log(voters)
+
+      /* 
+        Question 2: Given list of users, return an array of user names who are eligible to vote
+      */
+      // const users = [
+      //   {
+      //     name: 'Jesse',
+      //     age: 19
+      //   },
+      //   {
+      //     name: 'Monita',
+      //     age: 17
+      //   },
+      //   {
+      //     name: 'Kibbe',
+      //     age: 18
+      //   },
+      //   { 
+      //     name: 'Sonny',
+      //     age: 20
+      //   }
+      // ]
+
+      // const voters = users.filter(user => user.age >= 18)
+      // const voterNames = voters.map(voter => voter.name)
+      // console.log(voterNames)
+
+      // console.log(users.filter(user => user.age >= 18).map(voter => voter.name))
+  </script>
+</body>
+</html>
