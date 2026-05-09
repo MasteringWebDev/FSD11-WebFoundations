@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <style>
+    body { 
+      background-color: #eee;
+    }
+
+    #card {
+      width: 300px;
+      background-color: white;
+      margin: 10px 0;
+    }
+
+    #card img {
+      width: 100%;
+    }
+
+    #card-body {
+      padding: 10px;
+    }
+
+    #card-body h2 {
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Document Object Model</h1>
+
+  <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda optio, autem illum cumque facere molestias debitis qui ipsam, blanditiis voluptatum dolorem. Voluptate illum minima, dicta maxime culpa nesciunt iste distinctio</p>
+
+  <img src="https://www.creative-tim.com/blog/content/images/2022/01/which-development-job-is-right-for-you.jpg" width="300" id="developer-img" class="coding-images developer-images programming-images">
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, labore ipsa id dolore dignissimos a voluptatem autem cupiditate fugit aspernatur error ducimus velit architecto illo, rem exercitationem odio culpa est doloremque! Aut facere reiciendis ea autem ut doloremque culpa tempora</p>
+
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dignissimos amet optio esse porro quasi modi cupiditate sapiente accusamus aliquam!</p>
+
+  <ul>
+    <li class="special-hobby">Swimming</li>
+    <li class="special-hobby">Singing</li>
+    <li>Dancing</li>
+    <li>Programming</li>
+  </ul>
+
+  <input type="text" placeholder="Enter your city" value="New York City" id="city-input">
+
+  <div>
+    <div>
+      <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium omnis tenetur quaerat tempore perferendis. Aperiam at facilis nostrum cumque eligendi dolorum blanditiis magnam dolor ex, mollitia minima laborum perferendis quidem.</p>
+    </div>
+  </div>
+
+  <div id="parent"></div>
+
+  <!-- <div id="card">
+    <img src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D">
+    <div id="card-body">
+      <h2>JBL Headphones</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla.</p>
+      <p>$120.00 <s>$150.00</s></p>
+      <button>Add to cart</button>
+      <button>Buy now</button>
+    </div>
+  </div> -->
+
+  <script>
+    /*
+      # DOM (Document Object Model)
+        - Refers to the object representation of the "HTML document tree"
+        - Reserved: document
+        - Nodes: Represents individual HTML elements in the DOM tree
+
+        - Properties:
+          - body: Refers to the body node of the HTML document
+          - head: Refers to the head node of the HTML document
+          - title: Returns the title of the HTML document
+          - children: Returns all child nodes of a given node
+          - firstElementChild: Returns the first child node of a given node
+          - lastElementChild: Returns the last child node of a given node
+        - Methods:
+          - getElementById('id') ***: Returns the node which has the specified id
+          - getElementsByClassName('class') ***: Returns an HTMLCollection (array of nodes) which have the specified 'class'
+          - getElementsByTagName('tag'): Returns an HTMLCollection (array of nodes) which use the specified 'tag'
+
+      # DOM Content Manipulation (Access/Update)
+        - innerHTML: Refers to the inner HTML content of the node (Similar to innerText but also includes the HTML tags) (String)
+        - innerText: Refers to the inner text content of the node (String)
+        - value: Refers to the data entered within the form field node
+
+      # DOM Attribute Manipulation (Access/Update)
+        - Syntax: node.attribute
+        - Exception: 'class' attribute
+          - node.classList: Return a collection of classes assigned to that node
+            - node.classList.add('newClass'): Add a new class
+            - node.classList.remove('existingClass'): Remove existing class
+
+      # DOM Style Manipulation
+        - Single style property
+          - node.style.property (propety is always in camelCase)
+        - Multiple style properties
+          - node.style.cssText = 'property1: value1; property2: value2; ...'
+
+      # DOM Node Manipulation
+        - document.createElement('tag'): Create a new tag node
+        - node.appendChild(childNode): Append a child node to the parent node
+        - node.append(childNode1, childNode2, ...): Append multiple child nodes to the parent node
+        - node.remove(): Remove the specific node from the DOM
+        
+    */
+
+    // console.log(document)
+    // console.log(document.body)
+    // console.log(document.head)
+    // console.log(document.title)
+    // console.log(document.children) ['html']
+    // console.log(document.children[0]) // 'html' node
+    // console.log(document.children[0].children) // ['head', 'body']
+    // console.log(document.head.children)
+    // console.log(document.body.children)
+    // console.log(document.children[0].firstElementChild)
+    // console.log(document.children[0].lastElementChild)
+    // console.log(document.head.lastElementChild)
+
+    // console.log(document.getElementById('p1'))
+    // console.log(document.getElementsByClassName('special-hobby')[0])
+    // console.log(document.getElementsByTagName('p'))
+    // console.log(document.getElementsByTagName('li'))
+
+    // console.log(document.body.innerHTML)
+    // console.log(document.getElementById('p1').innerText)
+
+    // console.log(document.getElementById('city-input').value)
+
+    // document.getElementById('p1').innerText = 'Welcome to DOM (Document Object Model) Lecture. Here we will be learning about DOM properties and methods'
+
+    // document.getElementById('city-input').value = 'London'
+    
+    // console.log(document.getElementById('developer-img').src)
+    // console.log(document.getElementById('developer-img').width)
+    // console.log(document.getElementById('developer-img').id)
+    // console.log(document.getElementById('developer-img').classList)
+
+    // document.getElementById('developer-img').src = 'https://images.unsplash.com/photo-1770462988092-f8c614308a81?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8'
+    // document.getElementById('developer-img').width = 600
+
+    // document.getElementById('developer-img').classList.add('web-dev')
+    // document.getElementById('developer-img').classList.remove('developer-images')
+    // console.log(document.getElementById('developer-img').classList)
+
+    // document.getElementById('p1').style.color = 'white'
+    // document.getElementById('p1').style.backgroundColor = 'black'
+
+    // document.getElementById('p1').style.cssText = 'background-color: black; color: white'
+
+    // document.getElementById('developer-img').remove()
+
+    // const outerDiv = document.createElement('div')
+    // const innerDiv = document.createElement('div')
+
+    // const h1 = document.createElement('h1')
+    // h1.innerText = 'Hello World'
+
+    // const p = document.createElement('p')
+    // p.innerText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium omnis tenetur quaerat tempore perferendis. Aperiam at facilis nostrum cumque eligendi dolorum blanditiis magnam dolor ex, mollitia minima laborum perferendis quidem.'
+
+    // innerDiv.append(h1, p)
+    // outerDiv.append(innerDiv)
+
+    // const parent = document.getElementById('parent')
+    // parent.append(outerDiv)
+
+    /*
+    <div>
+      <div>
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium omnis tenetur quaerat tempore perferendis. Aperiam at facilis nostrum cumque eligendi dolorum blanditiis magnam dolor ex, mollitia minima laborum perferendis quidem.</p>
+      </div>
+    </div>
+    */
+
+
+    const parent = document.getElementById('parent')
+
+    const cardDiv = document.createElement('div')
+    cardDiv.id = "card"
+
+    const cardImg = document.createElement('img')
+    cardImg.src = "https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
+
+    const cardBody = document.createElement('div')
+    cardBody.id = 'card-body'
+
+    const productName = document.createElement('h2')
+    productName.innerText = "JBL Headphones"
+
+    const productDesc = document.createElement('p')
+    productDesc.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla."
+
+    const productPrice = document.createElement('p')
+    productPrice.innerHTML = '$120.00 <s>$150.00</s>'
+
+    const addToCardBtn = document.createElement('button')
+    addToCardBtn.innerText = 'Add to cart'
+    const buyNowBtn = document.createElement('button')
+    buyNowBtn.innerText = 'Buy now'
+
+    cardBody.append(productName, productDesc, productPrice, addToCardBtn, buyNowBtn)
+    cardDiv.append(cardImg, cardBody)
+
+    parent.append(cardDiv)
+
+    /*
+      <div id="card">
+        <img src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D">
+        <div id="card-body">
+          <h2>JBL Headphones</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla.</p>
+          <p>$120.00 <s>$150.00</s></p>
+          <button>Add to cart</button>
+          <button>Buy now</button>
+        </div>
+      </div>
+    */
+  </script>
+</body>
+</html>
