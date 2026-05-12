@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    form>div {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Job Application</h1>
+    <div>
+      <label for="fullname">Full Name:</label>
+      <input type="text" name="fullname" id="fullname" autocomplete="off">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" autocomplete="off">
+    </div>
+    <div>
+      <label>Skills:</label>
+      <span>
+        <input type="checkbox" name="skills" class="skills" value="HTML">HTML
+        <input type="checkbox" name="skills" class="skills" value="CSS">CSS
+        <input type="checkbox" name="skills" class="skills" value="JS">JavaScript
+        <input type="checkbox" name="skills" class="skills" value="REACT">React.js
+        <input type="checkbox" name="skills" class="skills" value="NODE">Node.js
+        <input type="checkbox" name="skills" class="skills" value="EXPRESS">Express.js
+        <input type="checkbox" name="skills" class="skills" value="MONGO">MongoDB
+      </span>
+    </div>
+    <div>
+      <label for="position">Position:</label>
+      <select name="position" id="position">
+        <option value="FE">Frontend Developer</option>
+        <option value="BE">Backend Developer</option>
+        <option value="FS">Fullstack Developer</option>
+      </select>
+    </div>
+    <div>
+      <label>Type:</label>
+      <span>
+        <input type="radio" name="job-type" class="job-type" value="PARTTIME">Part time
+        <input type="radio" name="job-type" class="job-type" value="FULLTIME">Full time
+      </span>
+    </div>
+    <div>
+      <label for="notice-period">Noice period ends on:</label>
+      <input type="date" name="notice-period" id="notice-period">
+    </div>
+    <div>
+      <label for="purpose">Why do you want to join us?</label><br>
+      <textarea name="purpose" id="purpose" rows="10" cols="40"></textarea>
+    </div>
+    <div>
+      <label for="resume">Resume:</label>
+      <input type="file" name="resume" id="resume">
+    </div>
+    <div>
+      <button type="reset">Reset</button>
+      <button type="button" onclick="handleFormData()">Submit</button>
+    </div>
+  </form>
+  <script>
+    function handleFormData() {
+      console.log('FORM SUBMITTED!')
+
+      const fullName = document.getElementById('fullname').value
+      const email = document.getElementById('email').value
+      const skills = document.getElementsByClassName('skills')
+      let selectedSkills = Array.from(skills).filter(skill => skill.checked)
+      selectedSkills = selectedSkills.map(skill => skill.value)
+      const position = document.getElementById('position').value
+      
+      const jobTypes = document.getElementsByClassName('job-type')
+      let selectedJobType = Array.from(jobTypes).filter(jobType => jobType.checked)
+
+      const userData = {
+        fullName,
+        email,
+        skills: selectedSkills,
+        position,
+        jobType: selectedJobType[0].value
+      }
+
+      console.log(userData)
+    }
+  </script>
+</body>
+</html>
