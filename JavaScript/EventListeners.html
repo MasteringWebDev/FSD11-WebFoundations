@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners</title>
+  <style>
+    #grandparent{
+      background-color: darkcyan;
+    }
+
+    #parent {
+      background-color: goldenrod;
+    }
+
+    #child {
+      background-color: rebeccapurple;
+    }
+
+    #grandparent, #parent, #child {
+      padding: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- <input type="text" id="input-1"> -->
+
+  <!-- <h1 id="welcome">Hi, </h1> -->
+  <!-- <div>
+    <img src="" alt="Invalid URL" style="margin-top: 10px;" width="200" id="img-result">
+  </div> -->
+
+  <!-- <div style="text-align: center;">
+    <h1 style="margin-bottom: 0; font-size: 3em;" id="speed">0</h1>
+    <p style="margin-top: 0;">km/h</p>
+  </div> -->
+
+  <div id="grandparent">
+    GRANDPARENT
+    <div id="parent">
+      PARENT
+      <div id="child">
+        CHILD
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /*
+      # Event Listeners:
+        - Create a logic which executes whenever a specific event has occured
+        - Using .addEventListener() method
+        - Syntax:
+          element.addEventListener('event', (event) => {
+            // Logic to be executed when the event is fired
+          })
+          - Callback parameter: 'event' object
+            - .type: Name of the event
+            - .target: The element/node where the event occured
+          - Examples:
+            - onclick: 'click' event ***
+            - ondblclick: 'dblclick' event (Double click)
+            - onmouseover: 'mouseover' event (Hover) ***
+            - onmouseout: 'mouseout' event (Opposite of Hover)
+            - onmousemove: 'mousemove' event (Cursor movement)
+            - oninput: 'input' event (Track every input change within a text field) ***
+            - onchange: 'change' event (Tracks overall change within a text field) ***
+            - onkeyup: 'keyup' event (Keyboard key event)
+            - onfocus: 'focus' event (Element gets focused) ***
+            - onblur: 'blur' event (Element looses focused) ***
+            - onload: 'load' event (HTML document load)
+    */
+
+    // const input1 = document.getElementById('input-1')
+    // input1.addEventListener('click', (event) => {
+    //   console.log('Input 1 was clicked', event)
+    // })
+
+    // const input1 = document.getElementById('input-1')
+    // input1.addEventListener('input', (event) => {
+    //   console.log(event.target.value)
+    // })
+
+    // const input1 = document.getElementById('input-1')
+    // input1.addEventListener('input', (event) => {
+    //   document.getElementById('welcome').innerText = `Hi, ${event.target.value}`
+    // })
+
+    // const input1 = document.getElementById('input-1')
+    // input1.addEventListener('input', (event) => {
+    //   document.getElementById('img-result').src = event.target.value
+    // })
+
+    // const input1 = document.getElementById('input-1')
+    // input1.addEventListener('mousemove', (event) => {
+    //   console.log(event.screenX, event.screenY)
+    // })
+
+    // const input1 = document.getElementById('input-1')
+    // let speed = 0
+    // input1.addEventListener('keydown', (event) => {
+    //   switch(event.key) {
+    //     case 'ArrowUp':
+    //       speed += 1
+    //       console.log(`ACCELERATING ... ${speed}km/h`)
+    //       document.getElementById('speed').innerText = speed
+    //       break
+    //     case 'ArrowDown':
+    //       speed -= 1
+    //       console.log(`BRAKING ... ${speed}km/h`)
+    //       document.getElementById('speed').innerText = speed
+    //       break
+    //     case 'ArrowRight':
+    //       console.log('TURNING RIGHT ....')
+    //       break
+    //     case 'ArrowLeft':
+    //       console.log('TURNING LEFT ....')
+    //       break
+    //   }
+    // })
+
+    /* ------------------------ */
+    /*
+      # Event Propagration: Process by which events are handled and then propagated through the DOM tree (Applicable for nested elements)
+      - 2 phases:
+        - Event capturing: Event is propagated from last ancestor node to it's child node and so on till the target element
+        - Event bubbling ***: Event is propagated from target node to the parent node and so on till the last ancestor node
+
+    */
+
+    // const grandparent = document.getElementById('grandparent')
+    // const parent = document.getElementById('parent')
+    // const child = document.getElementById('child')
+
+    // grandparent.addEventListener('click', (event) => {
+    //   console.log('GRANDPARENT CLICKED')
+    // })
+
+    // parent.addEventListener('click', (event) => {
+    //   console.log('PARENT CLICKED')
+    // })
+
+    // child.addEventListener('click', (event) => {
+    //   console.log('CHILD CLICKED')
+    // })
+
+    const grandparent = document.getElementById('grandparent')
+    const parent = document.getElementById('parent')
+    const child = document.getElementById('child')
+
+    // // Bubbling Phase
+    // grandparent.addEventListener('click', (event) => {
+    //   console.log('[BUBBLING PHASE] GRANDPARENT CLICKED')
+    // })
+
+    // parent.addEventListener('click', (event) => {
+    //   console.log('[BUBBLING PHASE] PARENT CLICKED')
+    // })
+
+    // child.addEventListener('click', (event) => {
+    //   console.log('[BUBBLING PHASE] CHILD CLICKED')
+    // })
+
+    // // Capturning Phase
+    // grandparent.addEventListener('click', (event) => {
+    //   console.log('[CAPTURING PHASE] GRANDPARENT CLICKED')
+    // }, true)
+
+    // parent.addEventListener('click', (event) => {
+    //   console.log('[CAPTURING PHASE] PARENT CLICKED')
+    // }, true)
+
+    // child.addEventListener('click', (event) => {
+    //   console.log('[CAPTURING PHASE] CHILD CLICKED')
+    // }, true)
+  </script>
+</body>
+</html>
