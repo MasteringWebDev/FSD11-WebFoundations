@@ -36,9 +36,9 @@
     <div>
       <label for="position">Position:</label>
       <select name="position" id="position">
-        <option value="FE">Frontend Developer</option>
-        <option value="BE">Backend Developer</option>
-        <option value="FS">Fullstack Developer</option>
+        <option value="FRONTEND">Frontend Developer</option>
+        <option value="BACKEND">Backend Developer</option>
+        <option value="FULLSTACK">Fullstack Developer</option>
       </select>
     </div>
     <div>
@@ -53,7 +53,7 @@
       <input type="date" name="notice-period" id="notice-period">
     </div>
     <div>
-      <label for="purpose">Why do you want to join us?</label><br>
+      <label for="purpose">Why do you want to join us? (Atleast 300 characters)</label><br>
       <textarea name="purpose" id="purpose" rows="10" cols="40"></textarea>
     </div>
     <div>
@@ -67,27 +67,125 @@
   </form>
   <script>
     function handleFormData() {
-      console.log('FORM SUBMITTED!')
-
       const fullName = document.getElementById('fullname').value
       const email = document.getElementById('email').value
+      
       const skills = document.getElementsByClassName('skills')
       let selectedSkills = Array.from(skills).filter(skill => skill.checked)
       selectedSkills = selectedSkills.map(skill => skill.value)
+
       const position = document.getElementById('position').value
       
       const jobTypes = document.getElementsByClassName('job-type')
-      let selectedJobType = Array.from(jobTypes).filter(jobType => jobType.checked)
+      let selectedJobType = Array.from(jobTypes).find(jobType => jobType.checked)
+
+      const noticePeriod = document.getElementById('notice-period').value
+
+      const whyJoinUs = document.getElementById('purpose').value
+
+      const files = document.getElementById('resume').files
 
       const userData = {
         fullName,
         email,
         skills: selectedSkills,
         position,
-        jobType: selectedJobType[0].value
+        jobType: selectedJobType ? selectedJobType.value : 'Not selected',
+        noticePeriod,
+        whyJoinUs,
+        resumeFileName: files[0] ? files[0].name : 'Not uploaded'
+      }
+      console.log('User data collected ✅. Now validating ...')
+
+      const result = validateFormData(userData)
+      alert(result)
+      console.log(result)
+    }
+
+    /*
+      # Validation rules:
+        1. Full Name: 
+          - Should not be empty ✅
+          - Atleast 3 characters ✅
+        2. Email: 
+          - Should not be empty ✅
+          - Should have '@' ✅
+          - Should have '.' ✅
+          - Atleast 3 characters before @ ✅
+          - Should have 2 or 3 characters after last '.' ✅
+            - Should be >= 2
+            - Should be <= 3
+        3. Skills:
+          - Atleast 1 skill should be selected ✅
+        4. Job Type:
+          - Atleast 1 job type should be selected
+        5. Notice Period:
+          - Should not be empty
+        6. Why do you want to join us
+          - Should not be empty
+          - Atleast 300 characters
+        7. Resume:
+          - Should be uploaded
+    */
+
+    function validateFormData(userData) {
+      const {
+        fullName,
+        email,
+        skills,
+        position,
+        jobType,
+        noticePeriod,
+        whyJoinUs,
+        resumeFileName
+      } = userData
+
+      /* ----------- */
+      if(!fullName || fullName.length < 3) {
+        return 'Invalid name'
       }
 
-      console.log(userData)
+      /* ----------- */
+      if(!email || !email.includes('@') || !email.includes('.')) {
+        return 'Invalid email'
+      }
+      const atCharIndex = email.indexOf('@')
+      if(atCharIndex < 3) {
+        return 'Invalid email'
+      }
+      const lastDotIndex = email.lastIndexOf('.')
+      const lastCharIndex = email.length - 1
+      if(lastCharIndex - lastDotIndex < 2 || lastCharIndex - lastDotIndex > 3) {
+        return 'Invalid email'
+      }
+
+      /* ----------- */
+      if(!skills.length) {
+        return 'Please select atleast 1 skill'
+      }
+
+      /* ----------- */
+      if(jobType == 'Not selected') {
+        return 'Please select job type'
+      }
+
+      /* ----------- */
+      if(!noticePeriod) {
+        return 'Invalid notice period'
+      }
+
+      /* ----------- */
+      if(!whyJoinUs || whyJoinUs.length < 300) {
+        return 'Please enter why do you want to join us (Atleast 300 characters)'
+      }
+
+      /* ----------- */
+      if(resumeFileName == 'Not uploaded') {
+        return 'Please upload resume'
+      }
+
+      /* ----------- */
+      return 'Your details have been validated and submitted successfully ✅'
     }
   </script>
 </body>
