@@ -1,0 +1,12 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgba(33, 37, 41, 0.1);
+}
+
+#eye-icon {
+  cursor: pointer;
+}
+
+#deposit-alert, #transfer-alert {
+  display: none;
+}
