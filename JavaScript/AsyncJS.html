@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript</title>
+  <style>
+    button {
+      font-size: 2em;
+      background-color: darkcyan;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="text-align: center;">
+  <!-- <h1>STOPWATCH</h1>
+  <input type="text" id="stopwatch-timer" placeholder="Set the time in ms">
+  <button onclick="startStopwatch()">START</button> -->
+
+  <!-- <img src="assets/ticking-bomb.png" width="200" id="bomb-img"><br>
+  <button style="background-color: red;" onclick="fireBomb()">Fire bomb (10s)</button>
+  <button onclick="diffuseBomb()">Diffuse bomb</button> -->
+
+  <!-- <div>
+    <h1 style="background-color: lightgray; font-size: 8em; font-family: fantasy;" id="timer">
+      <span>00</span> : <span>00</span>
+    </h1>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+  </div> -->
+
+  <div>
+    <img src="assets/rocket.png" width="600" id="rocket-img"><br>
+    <button onclick="launch()">Launch</button>
+    <button onclick="abort()">Abort</button>
+    <p id="status" style="font-size: 3em;"></p>
+  </div>
+
+  <script>
+    /*
+      # Asynchronous JavaScript
+        - Synchronous code: 
+          - Executed one line at a time
+          - Each expression waits for the previous expression to finish
+        - Asynchronous code:
+          - Does not block the execution of the synchronous code
+          - Handled in the background and executed later
+
+        - JavaScript is a single-threaded language
+          - JavaScript has one main thread
+          - It executes one operation at a time
+          - Still, JavaScrit can handle asynchronous operations with the help of:
+            - Web APIs
+            - Task Queues
+            - Event Loop
+
+        - Timer methods:
+          1. setTimeout() ***: Used to execute code after a specified time
+            - Syntax:
+              setTimeout(() => {
+                // code to execute after sometime
+              }, timeInMilliseconds)
+              - Returns: timerId
+            - clearTimeout(timerId): Clear the timeout created by setTimeout
+          2. setInterval() ***: Used to execute code repeatedly after specified time intervals
+            - Syntax:
+              setInterval(() => {
+                // code to execute repeatedly after specified time intervals
+              }, timeInMilliseconds)
+              - Returns: timerId
+            - clearInterval(timerId): Clear the interval created by setInterval
+    */
+
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // console.log(5)
+
+    // setTimeout(() => {
+    //   console.log('Hi')
+    // }, 3000)
+
+    // setTimeout(() => {
+    //   console.log('Test')
+    // }, 10000)
+
+    // console.log(1)
+    // console.log(2)
+    // setTimeout(() => {
+    //   console.log(3)
+    // }, 3000)
+    // console.log(4)
+    // console.log(5)
+
+    // console.log(1)
+    // console.log(2)
+    // setTimeout(() => {
+    //   console.log(3)
+    // }, 0)
+    // console.log(4)
+    // console.log(5)
+
+    /* --------------------- */
+    // # setTimeout Example 1
+    // function startStopwatch() {
+    //   const stopwatchTimerInMs = document.getElementById('stopwatch-timer').value
+
+    //   setTimeout(() => {
+    //     alert('TIME UP!')
+    //   }, stopwatchTimerInMs)
+    // }
+
+    /* --------------------- */
+    // # setTimeout Example 2
+    // let timerId = null
+
+    // function fireBomb() {
+    //   timerId = setTimeout(() => {
+    //     document.getElementById('bomb-img').src = 'assets/bomb-explosion.gif'
+    //   }, 10000)
+    // }
+
+    // function diffuseBomb() {
+    //   document.getElementById('bomb-img').src = 'assets/bomb-diffused.gif'
+    //   clearTimeout(timerId)
+    // }
+
+    /* --------------------- */
+    // setInterval(() => {
+    //   console.log('Hi')
+    // }, 1000)
+
+    // let count = 0
+    // setInterval(() => {
+    //   console.log(count++)
+    // }, 1000)
+
+    /* --------------------- */
+    // # setInterval Example 1
+    // let timerId = null
+    // let count = 0
+    // function startTimer() {
+    //   timerId = setInterval(() => {
+    //     let minutes = parseInt(count/60)
+    //     let seconds = count % 60
+
+    //     let m09 = parseInt(minutes/10) == 0 ? '0' : ''
+    //     let s09 = parseInt(seconds/10) == 0 ? '0' : ''
+
+    //     document.getElementById('timer').innerHTML = 
+    //     `<span>${m09}${minutes}</span> : <span>${s09}${seconds}</span>`
+    //     count++
+    //   }, 1000)
+    // }
+
+    // function stopTimer() {
+    //   clearInterval(timerId)
+    // }
+
+    /* --------------------- */
+    // # setInterval Example 2
+    // let count = 10
+    // let timerId = null
+    // function launch() {
+    //   timerId = setInterval(() => {
+    //     if(count == 0) {
+    //       clearInterval(timerId)
+    //       document.getElementById('rocket-img').src = 'https://mir-s3-cdn-cf.behance.net/project_modules/source/e59b07112562445.6017104965538.gif'
+    //       document.getElementById('status').innerText = 'Launch successful! 🚀'
+    //       return
+    //     }
+    //     document.getElementById('status').innerText = `Launching in ${count--} ...`
+    //   }, 1000)
+    // }
+
+    // function abort() {
+    //   clearInterval(timerId)
+    //   document.getElementById('status').innerText = 'Launch aborted! ❌'
+    // }
+  </script>
+</body>
+</html>
