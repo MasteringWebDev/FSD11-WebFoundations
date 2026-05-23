@@ -139,6 +139,9 @@ function createOrderCard() {
   const cancelOrderBtn = document.createElement('a')
   cancelOrderBtn.classList.add('btn', 'btn-danger', 'btn-sm')
   cancelOrderBtn.innerText = 'Cancel'
+  cancelOrderBtn.addEventListener('click', () => {
+    colDiv.remove()
+  })
 
   cardBodyDiv.append(itemsListUl, hr, orderStatusDiv, cancelOrderBtn)
 
