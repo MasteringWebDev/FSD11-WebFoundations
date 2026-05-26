@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch and API Integration</title>
+  <style>
+    body {
+      background-color: #eee;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      width: max-content;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .card img {
+      border-radius: 50%;
+    }
+
+    .card button {
+      background-color: darkcyan;
+      padding: 5px 10px;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Users</h1>
+  <div class="row" id="user-list">
+  </div>
+
+  <script>
+    /*
+      # Fetch and API Integration
+        - APIs: Application Programming Interface
+          - Medium for data exchange between the client (frontend) and the server (backend)
+            - Client -> Server: REQUEST
+            - Server -> Client: RESPONSE
+
+        - fetch()
+          - Can be used to make API requests to get external data in our application
+          - Works on promise principle
+          - Syntax:
+            fetch(API_URL)
+              .then(response => response.json())
+              .then(data => console.log(data))
+              .catch(error => console.log(error))
+          
+
+        - Free API: https://dummyjson.com/
+    */
+
+    // fetch('https://dummyjson.com/c/0837-8b0e-4c38-bbd4')
+    //   .then(response => response.json())
+    //   .then(data  => console.log(data))
+    //   .catch(error => console.log(error))
+
+    // fetch('https://dummyjson.com/products')
+    //   .then(res => res.json())
+    //   .then(data => console.log(data))
+    //   .catch(err => console.log(err))
+
+    async function fetchUsers() {
+      try {
+        const res = await fetch('https://dummyjson.com/c/0837-8b0e-4c38-bbd4')
+        const users = await res.json()
+        users.forEach(user => {
+          createUserCard(user)
+        })
+      } catch (error) {
+        console.log('Error while fetching users', error)
+      }
+    }
+    fetchUsers()
+
+
+    function createUserCard(user) {
+      const userList = document.getElementById('user-list')
+
+      const cardDiv = document.createElement('div')
+      cardDiv.classList.add('card')
+
+      const userImg = document.createElement('img')
+      userImg.src = user.userImg
+
+      const userName = document.createElement('h2')
+      userName.innerText = `${user.firstName} ${user.lastName}`
+
+      const userEmail = document.createElement('p')
+      userEmail.innerText = user.email
+
+      const followBtn = document.createElement('button')
+      followBtn.innerText = 'Follow'
+
+      cardDiv.append(userImg, userName, userEmail, followBtn)
+      userList.append(cardDiv)
+    }
+  </script>
+</body>
+</html>
