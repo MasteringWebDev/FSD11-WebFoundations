@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Handling</title>
+</head>
+<body>
+  <script>
+    /*
+      # Error Handling ***:
+        - Runtime errors in JS (if not handled) terminates the execution process and the rest of the code is not executed
+        - Error Handling is a mechanism to handle these runtime errors and provide meaningful error messages to the user
+        - Syntax:
+        try {
+          // code which is probable to throw an error
+        } catch (error) {
+          // If error is thrown, handle it here
+        }
+        - finally {}: Executes in both the scenarios
+        - 'throw' keyword: Throw custom errors
+          - Custom error: Use Error constructor
+            - Syntax: new Error('custom error message') 
+          - Syntax: throw new Error('custom error message')
+        - Additional note:
+          - If no error: START -> try -> END
+          - If error: START -> try -> catch -> END
+    */
+
+    // console.log('START')
+
+    // const jsonString = prompt('Please enter a JSON string')
+
+    // try {
+    //   console.log(JSON.parse(jsonString))
+    //   document.write('JSON string was valid')
+    // } catch (error) {
+    //   console.log(error)
+    //   document.write('JSON string was invalid')
+    // }
+
+    // console.log('END')
+
+    /* ------------------------ */
+    // console.log("... PREVIOUS CODE")
+    // try {
+    //   const x = 10
+    //   x = 20
+    // } catch (error) {
+    //   console.log(error)
+    // }
+    // console.log("NEXT CODE ...")
+
+    /* ------------------------ */
+    // console.log("... PREVIOUS CODE")
+    // let transactionsCount = 10
+    // try {
+    //   const x = 10
+    //   x = 15
+    //   console.log('TRANSACTION SUCCESSFUL')
+    // } catch (error) {
+    //   console.log(error)
+    //   console.log('TRANSACTION FAILED')
+    // } finally {
+    //   transactionsCount++
+    //   console.log('FINALLY BLOCK: The transaction count is ', transactionsCount)
+    // }
+    // console.log("NEXT CODE ...")
+
+    /* ------------------------ */
+    // console.log('... PREVIOUS CODE')
+
+    // try {
+    //   const num1 = Number(prompt('Please enter the divident'))
+    //   const num2 = Number(prompt('Please enter the divisor'))
+
+    //   if(num2 == 0) {
+    //     throw new Error('Divisor cannot be zero')
+    //   }
+
+    //   console.log(num1/num2)
+    // } catch (error) {
+    //   console.log(error)
+    // }
+
+    // console.log('NEXT CODE ...')
+  </script>
+</body>
+</html>
