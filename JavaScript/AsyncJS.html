@@ -182,6 +182,60 @@
     //   clearInterval(timerId)
     //   document.getElementById('status').innerText = 'Launch aborted! ❌'
     // }
+
+    /* -------------------------------------- */
+
+    /*
+       # JavaScript Engine and Browser Environment:
+        - JavaScript Engine
+          - Call Stack
+            - Primitive values
+            - GEC, FECs are pushed and popped
+          - Heap Memory
+            - Non-primitive values
+        - Web APIs
+          - Timer API
+          - Fetch API
+          - Geolocation API
+          - DOM API
+          - Notification API
+          - Storage API
+        - Task Queues: It queues all the callbacks which are ready for execution
+          - Microtask Queue (Priority Queue): Promise callbacks, async functions
+          - Macrotask Queue: setTimeout, setInterval
+
+        - Event Loop
+
+        - Illustration:
+          - JS Engine + Browser Env:
+            - https://miro.medium.com/v2/resize:fit:1400/1*sbxlfpnxpnzglnD338tE6w.png
+            - https://miro.medium.com/v2/resize:fit:1760/1*a_X8_BfQGJ6oHR-XmuPGRQ.gif
+          - Web APIs:
+            - https://miro.medium.com/v2/0*bw0cxVgXwBYycOqt.png
+    */
+
+    // # Example 1
+    // console.log(1)
+    // setTimeout(() => {
+    //   console.log(2)
+    // }, 2000)
+    // console.log(3)
+
+    // # Example 2
+    // console.log('START')
+
+    // function timeoutCallback() {
+    //   console.log('TIMEOUT')
+    // }
+    // setTimeout(timeoutCallback, 0)
+
+    // function promiseCallback(res) {
+    //   console.log(res)
+    // }
+    // Promise.resolve('PROMISE')
+    //   .then(promiseCallback)
+
+    // console.log('END')
   </script>
 </body>
 </html>
